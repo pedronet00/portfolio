@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Stabile Neto | Desenvolvedor FullStack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,800&family=Quantico&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: #151627;
+        }
+
+        .titulo-principal{
+            max-width: 480px;
+            text-align: center;
+            margin: 60px auto;
+            font-family:'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        .titulo-principal:after{
+            content: '|';
+            margin-left: 5px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+        /* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+        @keyframes pisca{
+            0%, 100%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
+
+        .card{
+            background-color: #151627;
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: lightgreen; /* Define a cor dos links quando o mouse está em cima */
+        }
+
+        .col .ver-projetos:hover{
+            background-color: lightgreen;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #151627;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: white; font-size: 32px; font-family: 'Quantico', sans-serif;"><span style="color: lightgreen;">&lt;</span> Pedro Stabile Neto <span style="color: lightgreen;">/&gt;</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-size: 20px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-size: 20px;">Quem Sou?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-size: 20px;">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-size: 20px;">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+      <!-- /navbar -->
+
+
+      <!-- 1st section -->
+      <div class="container" style="margin-bottom: 14%; margin-top: 15%;">
+        <div class="row">
+
+          <div class="col">
+            <h1 style="color: #C55225; font-size: 50px; font-family: 'Quantico', sans-serif;"><b>Desenvolvedor FullStack</b></h1>
+            <br/>
+            <p style="color: white; font-size: 25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor rutrum vehicula. Donec volutpat sagittis eros, eu varius tortor aliquet a. Integer sed felis pellentesque. </p>
+            <br/>
+            <a href="#" class="ver-projetos" style="background-color: #C55225; color: #151627; padding: 1.5%; font-size: 22px; text-decoration: none;"><b>Ver projetos</b></a>
+          </div>
+
+          <div class="col">
+            <p class="titulo-principal" style="color: lightgreen; font-size: 21px;"></p>
+          </div>
+
+          
+
+            
+        </div>
+       </div>
+       <!-- /1st section -->
+
+
+       <!-- 2nd section -->
+       <div class="card mb-3" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%;">
+        <div class="row g-0">
+          <div class="col-md-4" >
+            <img src="vector.png" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="text-align: center; font-family: 'Quantico', sans-serif; color:#C55225">Um pouco sobre mim 🌱</h2>
+              <br/>
+              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at orci ultricies, viverra augue a, interdum erat. Sed viverra lobortis lectus, vitae tincidunt tellus tempus eu. Cras massa mi, volutpat ut tortor sed, placerat dapibus arcu. Donec odio risus, feugiat lobortis dui eget, pulvinar fermentum nulla. Donec luctus lorem at risus feugiat, vel convallis diam dapibus. Duis vitae odio rhoncus, mattis erat eu, egestas neque. Nulla ante urna, convallis egestas pretium sed, porttitor quis risus. Praesent pellentesque erat sit amet magna lobortis porttitor. Donec turpis eros, consectetur sit amet nulla at, dapibus lobortis ligula. Nunc ullamcorper erat mauris, sit amet venenatis lectus egestas eu.</p>
+              <br/>
+              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at orci ultricies, viverra augue a, interdum erat. Sed viverra lobortis lectus, vitae tincidunt tellus tempus eu. Cras massa mi, volutpat ut tortor sed, placerat dapibus arcu. Donec odio risus, feugiat lobortis dui eget, pulvinar fermentum nulla. Donec luctus lorem at risus feugiat, vel convallis diam dapibus. Duis vitae odio rhoncus, mattis erat eu, egestas neque. Nulla ante urna, convallis egestas pretium sed, porttitor quis risus. Praesent pellentesque erat sit amet magna lobortis porttitor. Donec turpis eros, consectetur sit amet nulla at, dapibus lobortis ligula. Nunc ullamcorper erat mauris, sit amet venenatis lectus egestas eu.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /2nd section -->
+
+
+      <div class="container" style="margin: auto; margin-top: 5%;">
+        <h3 style="text-align: center; font-size: 50px; color: #C55225; font-family: 'Quantico', sans-serif;">Tecnologias utilizadas</h3>
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="margin: auto; margin-top: 5%;">
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="fa-brands fa-html5" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-css3-alt" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-php" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-solid fa-database" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-square-js" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-figma" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-laravel" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-react" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-git-alt" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-github" style="color: white; font-size: 60px;"></i></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="servicos_oferecidos" style="width: 100%; background-color: #1d1e31; margin-top: 5%;">
+        <br/><br/><br/>
+        <h2 style="text-align: center; font-size: 50px; color: #C55225; font-family: 'Quantico', sans-serif;">Serviços oferecidos</h2>
+      
+        <div class="servicos row" style="width: 90%; margin-top: 5%; margin-left: 5%;">
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="icon-1.png" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <br/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Desenvolvimento de Software</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo neque, condimentum ac blandit sit amet, imperdiet id massa . Pellentesque non tincidunt augue, vitae faucibus elit. Proin rhoncus posuere ultrices. Proin pellentesque dolor orci, quis euismod massa eleifend semper.</p>
+            </div>
+          </div>
+      
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="icon-2.png" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <br/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Prototipação</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo neque, condimentum ac blandit sit amet, imperdiet id massa . Pellentesque non tincidunt augue, vitae faucibus elit. Proin rhoncus posuere ultrices. Proin pellentesque dolor orci, quis euismod massa eleifend semper.</p>
+            </div>
+          </div>
+      
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="mkt_icon3.webp" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Google Meu Negócio e Ads</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce justo neque, condimentum ac blandit sit amet, imperdiet id massa . Pellentesque non tincidunt augue, vitae faucibus elit. Proin rhoncus posuere ultrices. Proin pellentesque dolor orci, quis euismod massa eleifend semper.</p>
+            </div>
+          </div>
+        </div>
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+
+const titulo = document.querySelector('.titulo-principal');
+const textoVariavelHTML = "<p>Olá! Este é meu portfólio 👨🏻‍💻</p>";
+const textoVariavelPHP = "<?php echo 'Olá! Este é meu portfólio 👨🏻‍💻'; ?>";
+
+function typeWrite(elemento, texto){
+    const textoArray = texto.split('');
+    elemento.innerHTML = ' ';
+    textoArray.forEach(function(letra, i){   
+        setTimeout(function(){
+            elemento.innerHTML += letra;
+        }, 75 * i);
+    });
+}
+
+function exibirTextoLoop() {
+    // Exibir a variável HTML
+    typeWrite(titulo, textoVariavelHTML);
+
+    // Apagar o texto gradualmente
+    setTimeout(function() {
+        const textoArray = titulo.innerHTML.split('');
+        let textoApagado = '';
+        textoArray.forEach(function(letra, i){   
+            setTimeout(function(){
+                textoApagado = textoArray.slice(0, textoArray.length - i).join('');
+                titulo.innerHTML = textoApagado;
+            }, 75 * i);
+        });
+    }, textoVariavelHTML.length * 75 + 1000); // Tempo extra após o texto completo
+
+    // Exibir a variável PHP depois de apagar o HTML
+    setTimeout(function() {
+        typeWrite(titulo, textoVariavelPHP);
+
+        // Apagar o texto gradualmente
+        setTimeout(function() {
+            const textoArray = titulo.innerHTML.split('');
+            let textoApagado = '';
+            textoArray.forEach(function(letra, i){   
+                setTimeout(function(){
+                    textoApagado = textoArray.slice(0, textoArray.length - i).join('');
+                    titulo.innerHTML = textoApagado;
+                }, 75 * i);
+            });
+
+            // Chamar a função novamente após apagar o PHP
+            setTimeout(exibirTextoLoop, textoVariavelPHP.length * 75 + 1000); // Tempo extra após o texto completo
+        }, textoVariavelPHP.length * 75 + 1000); // Tempo extra após o texto completo
+    }, (textoVariavelHTML.length + textoVariavelPHP.length + 1) * 75 + 1500); // Tempo extra após o texto completo
+}
+
+// Iniciar o loop
+exibirTextoLoop();
+
+
+
+
+
+</script>
+
+
+</html>
