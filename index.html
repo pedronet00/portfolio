@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Stabile Neto | Desenvolvedor FullStack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,800&family=Quantico&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            background-color: #151627;
+        }
+
+        .titulo-principal{
+            max-width: 480px;
+            text-align: center;
+            margin: 60px auto;
+            font-family:'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        .titulo-principal:after{
+            content: '|';
+            margin-left: 5px;
+            opacity: 1;
+            animation: pisca .7s infinite;
+        }
+        /* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+        @keyframes pisca{
+            0%, 100%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+        }
+
+        .card{
+            background-color: #151627;
+            color: white;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: lightgreen; /* Define a cor dos links quando o mouse está em cima */
+        }
+
+        .col .ver-projetos:hover{
+            background-color: lightgreen;
+        }
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .pulse-image {
+    animation: pulse 2s infinite; /* 2s é a duração da animação */
+  }
+  
+
+  .animated-image {
+    animation: rotate 10s linear infinite; /* 10s é a duração da animação */
+  }
+        
+    </style>
+</head>
+<>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #151627;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: white; font-size: 32px; font-family: 'Quantico', sans-serif;"><span style="color: lightgreen;">&lt;</span> Pedro Stabile Neto <span style="color: lightgreen;">/&gt;</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white; font-size: 20px;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem-sou" style="color: white; font-size: 20px;">Quem Sou?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos" style="color: white; font-size: 20px;">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato" style="color: white; font-size: 20px;">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+      <!-- /navbar -->
+
+
+      <!-- 1st section -->
+      <div class="container" style="margin-bottom: 14%; margin-top: 10%;">
+        <div class="row">
+
+          <div class="col">
+            <h1 style="color: #C55225; font-size: 50px; font-family: 'Quantico', sans-serif;"><b>Desenvolvedor FullStack</b></h1>
+            <br/>
+            <p style="color: white; font-size: 25px;">Criar soluções, solucionar problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
+            <br/>
+            <a href="#projetos" class="ver-projetos" style="background-color: #C55225; color: #151627; padding: 1.5%; font-size: 22px; text-decoration: none;"><b>Ver projetos</b></a>
+          </div>
+
+          <div class="col">
+            <p class="titulo-principal" style="color: lightgreen; font-size: 21px;"></p>
+          </div>
+
+          
+
+            
+        </div>
+       </div>
+       <!-- /1st section -->
+
+
+       <!-- 2nd section -->
+       <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%;">
+        <div class="row g-0">
+          <div class="col-md-4" >
+            <img src="vector.png" class="img-fluid rounded-start pulse-image" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title" style="text-align: center; font-family: 'Quantico', sans-serif; color:#C55225">Um pouco sobre mim 🌱</h2>
+              <br/>
+              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #C55225; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
+              <br/>
+              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: lightgreen; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!-- /2nd section -->
+
+        
+      <h3 id="projetos" style="color: #C55225; text-align: center; font-size: 50px; font-family: 'Quantico', sans-serif;">Meus projetos</h3>
+      <br/><br/>
+      <div class="row row-cols-1 row-cols-md-2 g-4"  style="margin: auto;">
+        <div class="col">
+          <div class="card">
+            <img src="projeto-1.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">InData</h5>
+              <p class="card-text">Um gerenciador de projetos feito em Laravel.</p>
+              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, PHP, MySQL, Laravel, JS</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="projeto-2.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">Costs</h5>
+              <p class="card-text">Projeto feito em React com o objetivo de gerenciar a vida financeira do usuário.</p>
+              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS, React</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="projeto-3.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">MovieTAG</h5>
+              <p class="card-text">Projeto em React consumindo a API do IMBD, consultando os <br/> melhores filmes ranqueados por lá.</p>
+              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS, React, Axios</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="projeto-4.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
+            <div class="card-body" style="text-align: center;">
+              <h5 class="card-title">Apoleon</h5>
+              <p class="card-text">Usando HTML e CSS, criei o layout de uma empresa prestadora de serviços <br/> de Criação de Software e Marketing/Branding.</p>
+              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container" style="margin: auto; margin-top: 10%;">
+        <h3 style="text-align: center; font-size: 50px; color: #C55225; font-family: 'Quantico', sans-serif;">Stacks dominadas</h3>
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="margin: auto; margin-top: 5%;">
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="fa-brands fa-html5" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-css3-alt" data-bs-toggle="tooltip" data-bs-placement="top" title="CSS" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-php" data-bs-toggle="tooltip" data-bs-placement="top" title="PHP" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-solid fa-database" data-bs-toggle="tooltip" data-bs-placement="top" title="MySQL" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-square-js" data-bs-toggle="tooltip" data-bs-placement="top" title="JavaScript" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-figma" data-bs-toggle="tooltip" data-bs-placement="top" title="Figma" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-laravel" data-bs-toggle="tooltip" data-bs-placement="top" title="Laravel" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-react" data-bs-toggle="tooltip" data-bs-placement="top" title="React" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-git-alt" data-bs-toggle="tooltip" data-bs-placement="top" title="Git" style="color: white; font-size: 60px;"></i></div>
+          </div>
+          <div class="col">
+            <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-github" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub" style="color: white; font-size: 60px;"></i></div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="servicos_oferecidos" style="width: 100%; background-color: #1d1e31; margin-top: 5%; margin-bottom: 5%;">
+        <br/><br/><br/>
+        <h2 style="text-align: center; font-size: 50px; color: #C55225; font-family: 'Quantico', sans-serif;">Serviços oferecidos</h2>
+      
+        <div class="servicos row" style="width: 90%; margin-top: 5%; margin-left: 5%;">
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="icon-1.png" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <br/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Desenvolvimento de Software</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
+            </div>
+          </div>
+      
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="icon-2.png" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <br/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Prototipação</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
+            </div>
+          </div>
+      
+          <div class="card col-md-4 col-sm-12" style="border: none; background-color: #1d1e31;">
+            <img src="icon-3.png" class="card-img-top" alt="..." style="width: 150px; height: 150px; margin: auto;">
+            <br/>
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center; color: #C55225; font-family: 'Quantico', sans-serif;">Copywriting & SEO</h5>
+              <p class="card-text" style="text-align: center; color: #fff;">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
+            </div>
+          </div>
+          
+        </div>
+      
+    
+
+        <!-- footer -->
+        <footer class="text-center text-white" id="contato" style="margin-top: 10%; background-color: #151627;">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      
+
+      
+
+      <!-- Google -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #dd4b39;"
+        href="mailto:stabilepedro010403@gmail.com"
+        role="button"
+        target="_blank"
+        ><i class="fab fa-google"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #ac2bac;"
+        href="https://www.instagram.com/pedronet00/"
+        role="button"
+        target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #0082ca;"
+        href="https://www.linkedin.com/in/pedro-neto-222162212/"
+        role="button"
+        target="_blank"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <!-- Github -->
+      <a
+        class="btn text-white btn-floating m-1"
+        style="background-color: #333333;"
+        href="https://github.com/pedronet00"
+        role="button"
+        target="_blank"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #151627;">
+    © 2023 Copyright:
+    <a class="text-white" href="#">Pedro Stabile Neto</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+          <!-- /footer -->
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+
+const titulo = document.querySelector('.titulo-principal');
+const textoVariavelHTML = "<p>Olá! Este é meu portfólio 👨🏻‍💻</p>";
+const textoVariavelPHP = "<?php echo 'Olá! Este é meu portfólio 👨🏻‍💻'; ?>";
+
+function typeWrite(elemento, texto){
+    const textoArray = texto.split('');
+    elemento.innerHTML = ' ';
+    textoArray.forEach(function(letra, i){   
+        setTimeout(function(){
+            elemento.innerHTML += letra;
+        }, 75 * i);
+    });
+}
+
+function exibirTextoLoop() {
+    // Exibir a variável HTML
+    typeWrite(titulo, textoVariavelHTML);
+
+    // Apagar o texto gradualmente
+    setTimeout(function() {
+        const textoArray = titulo.innerHTML.split('');
+        let textoApagado = '';
+        textoArray.forEach(function(letra, i){   
+            setTimeout(function(){
+                textoApagado = textoArray.slice(0, textoArray.length - i).join('');
+                titulo.innerHTML = textoApagado;
+            }, 75 * i);
+        });
+    }, textoVariavelHTML.length * 75 + 1000); // Tempo extra após o texto completo
+
+    // Exibir a variável PHP depois de apagar o HTML
+    setTimeout(function() {
+        typeWrite(titulo, textoVariavelPHP);
+
+        // Apagar o texto gradualmente
+        setTimeout(function() {
+            const textoArray = titulo.innerHTML.split('');
+            let textoApagado = '';
+            textoArray.forEach(function(letra, i){   
+                setTimeout(function(){
+                    textoApagado = textoArray.slice(0, textoArray.length - i).join('');
+                    titulo.innerHTML = textoApagado;
+                }, 75 * i);
+            });
+
+            // Chamar a função novamente após apagar o PHP
+            setTimeout(exibirTextoLoop, textoVariavelPHP.length * 75 + 1000); // Tempo extra após o texto completo
+        }, textoVariavelPHP.length * 75 + 1000); // Tempo extra após o texto completo
+    }, (textoVariavelHTML.length + textoVariavelPHP.length + 1) * 75 + 1500); // Tempo extra após o texto completo
+}
+
+// Iniciar o loop
+exibirTextoLoop();
+
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+
+
+
+</script>
+
+
+</html>
