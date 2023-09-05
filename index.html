@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<div lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,800&family=Quantico&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
 
         body{
@@ -198,6 +199,54 @@
           color:#C55225;
         }
 
+
+
+        .carousel-inner {
+  padding: 1em;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .carousel-item {
+    margin-right: 0;
+    flex: 0 0 33.333333%;
+    display: block;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 13em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img {
+    max-height: 100%;
+}
+@media (max-width: 767px) {
+  .card .img-wrapper {
+    height: 17em;
+  }
+}
+
+
+
+
         @keyframes pulse {
             0% {
               transform: scale(1);
@@ -299,6 +348,8 @@
               <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #C55225; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
               <br/>
               <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: lightgreen; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
+              <br/>
+              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
             </div>
           </div>
         </div>
@@ -307,52 +358,78 @@
 
         
 
-      <!-- 3rd section -->
-      <h3 id="projetos" style="color: #C55225; text-align: center; font-size: 50px; margin-top: 5%; font-family: 'Quantico', sans-serif;">Meus projetos</h3>
-      <br/><br/>
-      <div class="row row-cols-1 row-cols-md-2 g-4"  style="margin: auto;">
-        <div class="col">
-          <div class="card">
-            <img src="projeto-1.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title">InData</h5>
-              <p class="card-text">Um gerenciador de projetos feito em Laravel.</p>
-              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, PHP, MySQL, Laravel, JS</p>
+
+
+
+
+      <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card" >
+                    <div class="img-wrapper"style="height: 300px;"><img src="projeto-1.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 4</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
+            <div class="carousel-item" >
+              <div class="card" >
+                  <div class="img-wrapper"style="height: 300px;"><img src="projeto-2.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                      <h5 class="card-title">Card title 4</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="projeto-2.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title">Costs</h5>
-              <p class="card-text">Projeto feito em React com o objetivo de gerenciar a vida financeira do usuário.</p>
-              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS, React</p>
+            <div class="carousel-item" >
+              <div class="card" >
+                  <div class="img-wrapper"style="height: 300px;"><img src="projeto-3.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                  <div class="card-body">
+                      <h5 class="card-title">Card title 4</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                          card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </div>
+            <div class="carousel-item" >
+                <div class="card" >
+                    <div class="img-wrapper"style="height: 300px;"><img src="projeto-4.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 4</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="projeto-3.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title">MovieTAG</h5>
-              <p class="card-text">Projeto em React consumindo a API do IMBD, consultando os <br/> melhores filmes ranqueados por lá.</p>
-              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS, React, Axios</p>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper"><img src="..." class="d-block w-100" alt="..."> </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title 5</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="projeto-4.png" class="card-img-top" style="max-width: 500px; height: 300px; margin: auto;" alt="Hollywood Sign on The Hill"/>
-            <div class="card-body" style="text-align: center;">
-              <h5 class="card-title">Apoleon</h5>
-              <p class="card-text">Usando HTML e CSS, criei o layout de uma empresa prestadora de serviços <br/> de Criação de Software e Marketing/Branding.</p>
-              <p class="card-text"><b style="color: #C55225;">Tecnologias usadas:</b> HTML, CSS, JS</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 3rd section -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 
 
@@ -492,7 +569,8 @@
 
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
 
 <script>
 
@@ -577,9 +655,42 @@ function handleIntersection(entries, observer) {
         // Observe a div "projetos"
         observer.observe(document.getElementById('projetos'));
 
+</script>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-
+<script>
+  var multipleCardCarousel = document.querySelector(
+  "#carouselExampleControls"
+);
+if (window.matchMedia("(min-width: 768px)").matches) {
+  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+    interval: false,
+  });
+  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+  var cardWidth = $(".carousel-item").width();
+  var scrollPosition = 0;
+  $("#carouselExampleControls .carousel-control-next").on("click", function () {
+    if (scrollPosition < carouselWidth - cardWidth * 4) {
+      scrollPosition += cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+  $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+    if (scrollPosition > 0) {
+      scrollPosition -= cardWidth;
+      $("#carouselExampleControls .carousel-inner").animate(
+        { scrollLeft: scrollPosition },
+        600
+      );
+    }
+  });
+} else {
+  $(multipleCardCarousel).addClass("slide");
+}
 </script>
 
 
