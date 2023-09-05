@@ -85,36 +85,7 @@
           margin-bottom: 5%;
         }
 
-        #servicos-oferecidos {
-          position: relative;
-          text-decoration: none;
-          color: white;
-          transition: color 0.3s ease; 
-          font-size: 20px;
-        }
-
-        #servicos-oferecidos:hover{
-          color: #C55225;
-        }
-
-        #servicos-oferecidos::before {
-          content: "";
-          position: absolute;
-          left: 1;
-          bottom: -15px; 
-          width: 0;
-          height: 2px; 
-          background-color: lightgreen; 
-          transition: width 2s ease; 
-        }
-
-        #servicos-oferecidos:hover::before {
-          width: 50%; 
-        }
-
-        #servicos-oferecidos:not(:last-child) .nav-link::before {
-          margin-right: 10px; 
-        }
+        
 
         .title{
           width: 100%; 
@@ -131,24 +102,7 @@
           font-size: 50px;
         }
 
-        .stacks::before {
-          content: "";
-          position: absolute;
-          left: 1;
-          bottom: -15px;
-          width: 0;
-          height: 2px;
-          background-color: lightgreen;
-          transition: width 2s ease; 
-        }
-
-        .stacks:hover::before {
-          width: 33%; 
-        }
-
-        .stacks:not(:last-child) .nav-link::before {
-          margin-right: 10px;
-        }
+        
 
 
 
@@ -160,25 +114,7 @@
           font-size: 50px;
         }
 
-        /* Estilos para quando a div "projetos" estiver visível */
-        .projetos-visivel::before {
-            content: "";
-            position: absolute;
-            left: 1;
-            bottom: -15px;
-            width: 0;
-            height: 2px;
-            background-color: lightgreen;
-            transition: width 2s ease;
-        }
-
-        .projetos-visivel:hover::before {
-            width: 18%;
-        }
-
-        .projetos-visivel:not(:last-child) .nav-link::before {
-            margin-right: 10px;
-        }
+        
 
         #sobre-mim{
           text-align: center; 
@@ -233,7 +169,7 @@
           font-size: 50px; 
           color: #C55225; 
           font-family: 'Quantico', sans-serif;
-          width: 50%;
+          width: 100%;
           margin: auto;
         }
 
@@ -285,6 +221,10 @@
         @media(max-width: 375px){
           .container{
             text-align: center;
+          }
+
+          .servicos-container{
+            margin-top: 25%;
           }
         }
     </style>
@@ -543,8 +483,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: #151627;">
-    © 2023 Copyright:
-    <a class="text-white" href="#">Pedro Stabile Neto</a>
+    <p style="font-size: 12px;"><i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b></p>
   </div>
   <!-- Copyright -->
         </footer>
