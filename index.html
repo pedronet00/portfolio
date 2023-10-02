@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Stabile Neto | Desenvolvedor FullStack</title>
+    <link rel="icon" type="image/x-icon" href="vector.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,600;1,800&family=Quantico&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
     <style>
 
 
@@ -52,6 +55,13 @@
           font-size: 50px; 
           font-family: 'Quantico', sans-serif;
         }
+
+        #minhas-conquistas{
+          text-align: center;
+          color: #C55225; 
+          font-size: 50px; 
+          font-family: 'Quantico', sans-serif;
+        }
         
         .navbar-nav .nav-link {
           position: relative;
@@ -83,11 +93,32 @@
         .servicos_oferecidos{
           width: 100%; 
           background-color: #1d1e31; 
-          margin-top: 5%; 
           margin-bottom: 5%;
         }
-
         
+        .certificados{
+          width: 90%; 
+          background-color: #1d1e31; 
+          margin-top: 5%; 
+          margin: auto;
+        }
+
+        .certificado{
+          border: none;
+          text-align: center;
+        }
+        
+
+        .certificados-servicos{
+          width: 100%; 
+          overflow: hidden;
+          background-color: #1d1e31; 
+          margin-top: 5%; 
+        }
+
+        .img-certificado{
+          height: 350px;
+        }
 
         .title{
           width: 100%; 
@@ -283,6 +314,10 @@
           .servicos-container{
             margin-top: 25%;
           }
+
+          .img-certificado{
+            height: 250px;
+          }
         }
     </style>
 </head>
@@ -326,15 +361,15 @@
         <div class="row">
 
           <div class="col inicio">
-            <h1 class="title"><b>Desenvolvedor FullStack</b></h1>
+            <h1 class="title" data-aos="fade-up" data-aos-duration="3000"><b>Desenvolvedor FullStack</b></h1>
             <br/>
-            <p style="color: white; font-size: 25px;">Criar soluções, solucionar problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
+            <p style="color: white; font-size: 25px;" data-aos="fade-up" data-aos-duration="3000">Criar soluções, solucionar problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
             <br/>
-            <a href="#projetos" class="ver-projetos" >Ver projetos</a>
+            <a href="#projetos" class="ver-projetos" data-aos="fade-up" data-aos-duration="2000">Ver projetos</a>
           </div>
 
           <div class="col">
-            <p class="titulo-principal" style="color: lightgreen; font-size: 21px;"></p>
+            <p class="titulo-principal" style="color: lightgreen; font-size: 21px;" data-aos="fade-up" data-aos-duration="3000"></p>
           </div>
             
         </div>
@@ -345,14 +380,12 @@
 
 
        <!-- 2nd section -->
-       <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%; display: flex;
-       justify-content: center;">
-        <div class="row g-0" style="display: flex;
-        align-items: center;">
-          <div class="col-md-4" >
+       <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%; display: flex; justify-content: center;">
+        <div class="row g-0" style="display: flex; align-items: center;">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
             <img src="vector.png" class="img-fluid rounded-start pulse-image" alt="...">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8" data-aos="fade-right" data-aos-duration="2000">
             <div class="card-body">
               <h2 class="card-title" id="sobre-mim">Um pouco sobre mim 🌱</h2>
               <br/>
@@ -446,7 +479,7 @@
 
 
 
-      <div class="container" style="margin: auto; margin-top: 8%;">
+      <div class="container" data-aos="flip-left" data-aos-duration="2000" style="margin: auto; margin-top: 8%;">
         <h3 class="title stacks" style="text-align: center;">Stacks dominadas</h3>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="margin: auto; margin-top: 5%;">
           <div class="col">
@@ -482,39 +515,162 @@
         </div>
       </div>
 
+      <section class="certificados-servicos">
+        <br/><br/>
+        <h2 id="minhas-conquistas">Minhas conquistas</h2>
+        <br/><br/>
+        <div class="row row-cols-1 row-cols-md-3 g-4 certificados">
+          
+          <div class="col" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="certificado_git.jpg" class="card-img-top img-certificado"
+                alt="Hollywood Sign on The Hill" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Git & GitHub</h5>
+                <p class="card-text">
+                  Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="CS.jpg" class="card-img-top img-certificado"
+                alt="Palm Springs Road" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Success</h5>
+                <p class="card-text">
+                  Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="react.png" class="card-img-top img-certificado"
+                alt="Los Angeles Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">ReactJS Essential Training</h5>
+                <p class="card-text">Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="agile.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Desenvolvimento Ágil de Software</h5>
+                <p class="card-text">Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="CX.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Experience</h5>
+                <p class="card-text">De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="scrum.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do SCRUM</h5>
+                <p class="card-text">Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, <i>sprints, backlogs, </i> etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="marketing.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do Marketing Digital</h5>
+                <p class="card-text">Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="problemas.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Técnicas de Resolução de Problemas</h5>
+                <p class="card-text">Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-left" data-aos-duration="1000">
+            <div class="card certificado" style="background-color: #1d1e31;">
+              <img src="copywriting.png" class="card-img-top img-certificado"
+                alt="Skyscrapers" />
+              <div class="card-body">
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;">CopyWriting</h5>
+                <p class="card-text">Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-      <div class="servicos_oferecidos">
-        <br/><br/><br/>
-        <h2 id="servicos-oferecidos">Serviços oferecidos</h2>
-        <div class="servicos row">
-          <div class="card col-md-4 col-sm-12 servicos-container">
-            <img src="icon-1.png" class="card-img-top img-servicos" alt="...">
-            <br/>
-            <div class="card-body">
-              <h5 class="card-title topicos-servicos">Desenvolvimento de Software</h5>
-              <p class="card-text servicos-texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
+        <div class="servicos_oferecidos">
+          <br/><br/><br/>
+          <h2 id="servicos-oferecidos">Serviços oferecidos</h2>
+          <div class="servicos row">
+            <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="1000">
+              <img src="icon-1.png" class="card-img-top img-servicos" alt="...">
+              <br/>
+              <div class="card-body">
+                <h5 class="card-title topicos-servicos">Desenvolvimento de Software</h5>
+                <p class="card-text servicos-texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
+              </div>
             </div>
-          </div>
-      
-          <div class="card col-md-4 col-sm-12 servicos-container">
-            <img src="icon-2.png" class="card-img-top img-servicos" alt="...">
-            <br/>
-            <div class="card-body">
-              <h5 class="card-title topicos-servicos">Prototipação</h5>
-              <p class="card-text servicos-texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
+        
+            <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="2000">
+              <img src="icon-2.png" class="card-img-top img-servicos" alt="...">
+              <br/>
+              <div class="card-body">
+                <h5 class="card-title topicos-servicos">Prototipação</h5>
+                <p class="card-text servicos-texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
+              </div>
             </div>
-          </div>
-      
-          <div class="card col-md-4 col-sm-12 servicos-container">
-            <img src="icon-3.png" class="card-img-top img-servicos" alt="...">
-            <br/>
-            <div class="card-body">
-              <h5 class="card-title topicos-servicos">Copywriting & SEO</h5>
-              <p class="card-text servicos-texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
+        
+            <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="3000">
+              <img src="icon-3.png" class="card-img-top img-servicos" alt="...">
+              <br/>
+              <div class="card-body">
+                <h5 class="card-title topicos-servicos">Copywriting & SEO</h5>
+                <p class="card-text servicos-texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
+              </div>
             </div>
+        </div>
+      </section>
+
+      <form style="width: 50%; margin: auto;">
+        <div class="row g-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Seu nome" aria-label="Nome">
           </div>
-      </div>
+          <div class="col">
+            <input type="email" class="form-control" placeholder="Seu e-mail" aria-label="Email">
+          </div>
+        </div>
+        <div class="col" style="margin-top: 2%;">
+          <textarea class="form-control" style="resize: none; height: 10rem;" placeholder="Seu e-mail" aria-label="Email"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
       
     
 
@@ -584,6 +740,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
 
@@ -704,6 +861,10 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 } else {
   $(multipleCardCarousel).addClass("slide");
 }
+</script>
+
+<script>
+  AOS.init();
 </script>
 
 
