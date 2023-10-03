@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
     <style>
 
         body{
@@ -277,6 +276,10 @@
         align-items: center;
     }
 
+    .img-projeto{
+      height: 300px;
+    }
+
 
 
     .card img {
@@ -334,12 +337,20 @@
         }
 
         @media(max-width: 376px){
+
+          *{
+            overflow-x: hidden;
+          }
           
           .container{
             text-align: center;
             margin: auto;
+            overflow: hidden;
           }
 
+          .img-projeto{
+            height: 200px;
+          }
 
           .title{
             text-align: center;
@@ -347,6 +358,7 @@
 
           #logo{
             text-align: left;
+            overflow: hidden;
           }
 
           .servicos-container{
@@ -367,10 +379,12 @@
           }
 
           .float{
-            width:50px;
-            height:50px;
-            font-size: 20px;
+            position: fixed;
+            width:65px;
+            height:65px;
+            font-size: 30px;
             margin: auto;
+            overflow: hidden;
           }
         }
     </style>
@@ -456,15 +470,16 @@
               <br/>
               <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
             </div>
+            
           </div>
         </div>
+        
        </div>
       <!-- /2nd section -->
 
         
 
-
-
+      <div id="projetos"></div>
 
        
         <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
@@ -472,7 +487,7 @@
           <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                    <div class="img-wrapper" style="height: 300px;"><img src="img/invision.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper" style="height: 300px;"><img src="img/invision.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InVision &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
                           <p class="card-text">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
@@ -483,7 +498,7 @@
               </div>
               <div class="carousel-item" >
                   <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                      <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-1.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
+                      <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-1.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InData &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
                           <p class="card-text">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
@@ -493,7 +508,7 @@
               </div>
               <div class="carousel-item" >
                 <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                    <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-2.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-2.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Costs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
                           <p class="card-text">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
@@ -503,7 +518,7 @@
             </div>
               <div class="carousel-item" >
                 <div class="card" style="margin-left: 5%;">
-                    <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-3.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-3.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Movie Tag &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
                           <p class="card-text">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
@@ -513,7 +528,7 @@
             </div>
               <div class="carousel-item" >
                   <div class="card" style="margin-left: 5%;">
-                      <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-4.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                      <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-4.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Apoleon &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
                           <p class="card-text">Produto para uma empresa que produz software e presta serviços de marketing.</p>
@@ -817,131 +832,122 @@
 </body>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+  
 <script>
 
 const titulo = document.querySelector('.titulo-principal');
-const textoVariavel = "Desenvolvedor FullStack";
+    const textoVariavel = "Desenvolvedor FullStack";
 
-function typeWrite(elemento, texto) {
-    const textoArray = texto.split('');
-    let i = 0;
+    function typeWrite(elemento, texto) {
+        const textoArray = texto.split('');
+        let i = 0;
 
-    function escrever() {
-        if (i < textoArray.length) {
-            elemento.innerHTML += textoArray[i];
-            i++;
-            setTimeout(escrever, 120);
-        } else {
-            setTimeout(apagar, 2000); // Esperar 2 segundos antes de apagar
+        function escrever() {
+            if (i < textoArray.length) {
+                elemento.innerHTML += textoArray[i];
+                i++;
+                setTimeout(escrever, 120);
+            } else {
+                setTimeout(apagar, 2000); // Esperar 2 segundos antes de apagar
+            }
         }
-    }
 
-    function apagar() {
-        if (elemento.innerHTML.length > 0) {
-            elemento.innerHTML = elemento.innerHTML.slice(0, -1);
-            setTimeout(apagar, 75);
-        } else {
-            setTimeout(reiniciar, 1000); // Esperar 1 segundo antes de reiniciar
+        function apagar() {
+            if (elemento.innerHTML.length > 0) {
+                elemento.innerHTML = elemento.innerHTML.slice(0, -1);
+                setTimeout(apagar, 75);
+            } else {
+                setTimeout(reiniciar, 1000); // Esperar 1 segundo antes de reiniciar
+            }
         }
+
+        function reiniciar() {
+            i = 0;
+            setTimeout(escrever, 0);
+        }
+
+        escrever();
     }
 
-    function reiniciar() {
-        i = 0;
-        setTimeout(escrever, 0);
+    // Iniciar o loop
+    typeWrite(titulo, textoVariavel);
+
+
+
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+
+    var multipleCardCarousel = document.querySelector(
+    "#carouselExampleControls"
+    );
+    if (window.matchMedia("(min-width: 768px)").matches) {
+    var carousel = new bootstrap.Carousel(multipleCardCarousel, {
+        interval: false,
+    });
+    var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+    var cardWidth = $(".carousel-item").width();
+    var scrollPosition = 0;
+    $("#carouselExampleControls .carousel-control-next").on("click", function () {
+        if (scrollPosition < carouselWidth - cardWidth * 4) {
+        scrollPosition += cardWidth;
+        $("#carouselExampleControls .carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+        );
+        }
+    });
+    $("#carouselExampleControls .carousel-control-prev").on("click", function () {
+        if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        $("#carouselExampleControls .carousel-inner").animate(
+            { scrollLeft: scrollPosition },
+            600
+        );
+        }
+    });
+    } else {
+    $(multipleCardCarousel).addClass("slide");
     }
 
-    escrever();
-}
+    
+    AOS.init();
 
-// Iniciar o loop
-typeWrite(titulo, textoVariavel);
+    document.addEventListener("DOMContentLoaded", function () {
+    const mostrarTodosBtn = document.getElementById("mostrarTodos");
+    const ocultarTodosBtn = document.getElementById("ocultarTodos");
+    const hiddenCards = document.querySelectorAll(".hidden-card");
+    const servicosOferecidosSection = document.getElementById("minhas-conquistas");
 
+    mostrarTodosBtn.addEventListener("click", function () {
+        hiddenCards.forEach(function (card) {
+        card.style.display = "block"; // Mostrar o card
+        });
 
-
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
-
-
-</script>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-<script>
-  var multipleCardCarousel = document.querySelector(
-  "#carouselExampleControls"
-);
-if (window.matchMedia("(min-width: 768px)").matches) {
-  var carousel = new bootstrap.Carousel(multipleCardCarousel, {
-    interval: false,
-  });
-  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-  var cardWidth = $(".carousel-item").width();
-  var scrollPosition = 0;
-  $("#carouselExampleControls .carousel-control-next").on("click", function () {
-    if (scrollPosition < carouselWidth - cardWidth * 4) {
-      scrollPosition += cardWidth;
-      $("#carouselExampleControls .carousel-inner").animate(
-        { scrollLeft: scrollPosition },
-        600
-      );
-    }
-  });
-  $("#carouselExampleControls .carousel-control-prev").on("click", function () {
-    if (scrollPosition > 0) {
-      scrollPosition -= cardWidth;
-      $("#carouselExampleControls .carousel-inner").animate(
-        { scrollLeft: scrollPosition },
-        600
-      );
-    }
-  });
-} else {
-  $(multipleCardCarousel).addClass("slide");
-}
-</script>
-
-<script>
-  AOS.init();
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-  const mostrarTodosBtn = document.getElementById("mostrarTodos");
-  const ocultarTodosBtn = document.getElementById("ocultarTodos");
-  const hiddenCards = document.querySelectorAll(".hidden-card");
-  const servicosOferecidosSection = document.getElementById("minhas-conquistas");
-
-  mostrarTodosBtn.addEventListener("click", function () {
-    hiddenCards.forEach(function (card) {
-      card.style.display = "block"; // Mostrar o card
+        mostrarTodosBtn.style.display = "none"; // Ocultar o botão "Mostrar Todos"
+        ocultarTodosBtn.style.display = "block"; // Mostrar o botão "Ocultar Todos"
     });
 
-    mostrarTodosBtn.style.display = "none"; // Ocultar o botão "Mostrar Todos"
-    ocultarTodosBtn.style.display = "block"; // Mostrar o botão "Ocultar Todos"
-  });
+    ocultarTodosBtn.addEventListener("click", function () {
+        hiddenCards.forEach(function (card) {
+        card.style.display = "none"; // Ocultar o card
+        });
 
-  ocultarTodosBtn.addEventListener("click", function () {
-    hiddenCards.forEach(function (card) {
-      card.style.display = "none"; // Ocultar o card
+        ocultarTodosBtn.style.display = "none"; // Ocultar o botão "Ocultar Todos"
+        mostrarTodosBtn.style.display = "block"; // Mostrar o botão "Mostrar Todos"
+
+        // Redirecionar a página para a seção "Serviços oferecidos"
+        servicosOferecidosSection.scrollIntoView({ behavior: "smooth" });
+    });
     });
 
-    ocultarTodosBtn.style.display = "none"; // Ocultar o botão "Ocultar Todos"
-    mostrarTodosBtn.style.display = "block"; // Mostrar o botão "Mostrar Todos"
-
-    // Redirecionar a página para a seção "Serviços oferecidos"
-    servicosOferecidosSection.scrollIntoView({ behavior: "smooth" });
-  });
-});
-  </script>
-  
-
+</script>
 
 </html>
