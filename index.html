@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Stabile Neto | Desenvolvedor FullStack</title>
+    <link rel="icon" type="image/x-icon" href="img/vector.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <style>
-
 
         body{
             background-color: #151627;
@@ -94,6 +94,7 @@
           width: 100%; 
           background-color: #1d1e31; 
           margin-bottom: 5%;
+          margin-top: 5%;
         }
         
         .certificados{
@@ -232,13 +233,14 @@
         }
 
         #mostrarTodos, #ocultarTodos{
-          margin: 5% auto;
-          background-color: #C55225;
-          color: #151627;
-          width: 15%;
+          font-size: 50px;
+          text-align: center;
+          margin: auto;
+          background: none;
           border: none;
-          font-weight: bold;
-          border-radius: 5px;
+          width: 5%;
+          color: #C55225;
+
         }
 
         
@@ -389,7 +391,7 @@
             <a href="#projetos" class="ver-projetos" data-aos="fade-up" data-aos-duration="2000">Ver projetos</a>
           </div>
 
-            <img src="programmer.png" id="programmer" style="width: 600px; height: 400px;">
+            <img src="img/programmer.png" id="programmer" style="width: 600px; height: 400px;">
             
         </div>
         <div class="col">
@@ -405,7 +407,7 @@
        <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%; display: flex; justify-content: center;">
         <div class="row g-0" style="display: flex; align-items: center;">
           <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
-            <img src="vector.png" class="img-fluid rounded-start pulse-image" alt="...">
+            <img src="img/vector.png" class="img-fluid rounded-start pulse-image" alt="...">
           </div>
           <div class="col-md-8" data-aos="fade-right" data-aos-duration="2000">
             <div class="card-body">
@@ -427,71 +429,71 @@
 
 
 
-
-      <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
-        <h3 class="title stacks" style="text-align: center;">Projetos desenvolvidos</h3>
-        <div class="carousel-inner">
-              <div class="carousel-item active">
+       
+        <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
+          <h3 class="title stacks" style="text-align: center;">Projetos desenvolvidos</h3>
+          <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
+                    <div class="img-wrapper" style="height: 300px;"><img src="img/invision.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InVision &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
+                          <p class="card-text">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
+                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> PHP, Laravel, Jetstream, Livewire, MySQL, JS</p>
+                          
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item" >
+                  <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
+                      <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-1.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InData &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
+                          <p class="card-text">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
+                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, PHP, Laravel, MySQL, JS</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item" >
                 <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                  <div class="img-wrapper" style="height: 300px;"><img src="invision.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-2.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InVision &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                        <p class="card-text">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
-                        <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> PHP, Laravel, Jetstream, Livewire, MySQL, JS</p>
-                        
+                        <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Costs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
+                          <p class="card-text">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
+                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, JSON como DataBase</p>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" >
-                <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                    <div class="img-wrapper" style="height: 300px;"><img src="projeto-1.png" style="height: 300px;" class="d-block w-100" alt="..."> </div>
-                    <div class="card-body">
-                        <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InData &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                        <p class="card-text">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
-                        <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, PHP, Laravel, MySQL, JS</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" >
-              <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
-                  <div class="img-wrapper" style="height: 300px;"><img src="projeto-2.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                      <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Costs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                        <p class="card-text">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
-                        <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, JSON como DataBase</p>
-                  </div>
-              </div>
-          </div>
-            <div class="carousel-item" >
-              <div class="card" style="margin-left: 5%;">
-                  <div class="img-wrapper"style="height: 300px;"><img src="projeto-3.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
-                  <div class="card-body">
-                      <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Movie Tag &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                        <p class="card-text">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
-                        <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, API IMDB</p>
-                  </div>
-              </div>
-          </div>
-            <div class="carousel-item" >
+              <div class="carousel-item" >
                 <div class="card" style="margin-left: 5%;">
-                    <div class="img-wrapper"style="height: 300px;"><img src="projeto-4.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                    <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-3.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
-                        <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Apoleon &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                        <p class="card-text">Produto para uma empresa que produz software e presta serviços de marketing.</p>
-                        <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS</p>
+                        <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Movie Tag &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
+                          <p class="card-text">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
+                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, API IMDB</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+              <div class="carousel-item" >
+                  <div class="card" style="margin-left: 5%;">
+                      <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-4.png" style="height: 300px;"  class="d-block w-100" alt="..."> </div>
+                      <div class="card-body">
+                          <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Apoleon &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
+                          <p class="card-text">Produto para uma empresa que produz software e presta serviços de marketing.</p>
+                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
 
 
 
@@ -539,7 +541,7 @@
           
           <div class="col" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="certificado_git.jpg" class="card-img-top img-certificado"
+              <img src="img/certificado_git.jpg" class="card-img-top img-certificado"
                 alt="Hollywood Sign on The Hill" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Git & GitHub</h5>
@@ -551,7 +553,7 @@
           </div>
           <div class="col" data-aos="fade-up" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="CS.jpg" class="card-img-top img-certificado"
+              <img src="img/CS.jpg" class="card-img-top img-certificado"
                 alt="Palm Springs Road" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Success</h5>
@@ -563,7 +565,7 @@
           </div>
           <div class="col" data-aos="fade-left" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="react.png" class="card-img-top img-certificado"
+              <img src="img/react.png" class="card-img-top img-certificado"
                 alt="Los Angeles Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">ReactJS Essential Training</h5>
@@ -572,11 +574,11 @@
             </div>
           </div>
 
-          <button id="mostrarTodos">Mostrar Todos</button>
+          <button id="mostrarTodos"><i class="fa-solid fa-chevron-down"></i></button>
 
-          <div class="col hidden-card">
+          <div class="col hidden-card" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="agile.png" class="card-img-top img-certificado"
+              <img src="img/agile.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Desenvolvimento Ágil de Software</h5>
@@ -585,9 +587,9 @@
               </div>
             </div>
           </div>
-          <div class="col hidden-card">
+          <div class="col hidden-card" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="CX.png" class="card-img-top img-certificado"
+              <img src="img/CX.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Experience</h5>
@@ -596,9 +598,9 @@
               </div>
             </div>
           </div>
-          <div class="col hidden-card">
+          <div class="col hidden-card" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="scrum.png" class="card-img-top img-certificado"
+              <img src="img/scrum.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do SCRUM</h5>
@@ -609,7 +611,7 @@
           </div>
           <div class="col hidden-card" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="marketing.png" class="card-img-top img-certificado"
+              <img src="img/marketing.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do Marketing Digital</h5>
@@ -620,7 +622,7 @@
           </div>
           <div class="col hidden-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="problemas.png" class="card-img-top img-certificado"
+              <img src="img/problemas.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Técnicas de Resolução de Problemas</h5>
@@ -631,7 +633,7 @@
           </div>
           <div class="col hidden-card" data-aos="fade-left" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
-              <img src="copywriting.png" class="card-img-top img-certificado"
+              <img src="img/copywriting.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">CopyWriting</h5>
@@ -640,16 +642,16 @@
               </div>
             </div>
           </div>
-          <button id="ocultarTodos" style="display: none;">Ocultar Todos</button>
+          <button id="ocultarTodos" style="display: none;"><i class="fa-solid fa-chevron-up"></i></button>
         </div>
 
 
-        <div class="servicos_oferecidos">
+        <div class="servicos_oferecidos" id="servicos_oferecidos">
           <br/><br/><br/>
           <h2 id="servicos-oferecidos">Serviços oferecidos</h2>
           <div class="servicos row">
             <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="1000">
-              <img src="icon-1.png" class="card-img-top img-servicos" alt="...">
+              <img src="img/icon-1.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
                 <h5 class="card-title topicos-servicos">Desenvolvimento de Software</h5>
@@ -658,7 +660,7 @@
             </div>
         
             <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="2000">
-              <img src="icon-2.png" class="card-img-top img-servicos" alt="...">
+              <img src="img/icon-2.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
                 <h5 class="card-title topicos-servicos">Prototipação</h5>
@@ -667,7 +669,7 @@
             </div>
         
             <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="3000">
-              <img src="icon-3.png" class="card-img-top img-servicos" alt="...">
+              <img src="img/icon-3.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
                 <h5 class="card-title topicos-servicos">Copywriting & SEO</h5>
@@ -682,7 +684,7 @@
 
         <div class="row">
           <div class="col">
-            <img src="email.png" class="img-email">
+            <img src="img/email.png" class="img-email">
           </div>
           <div class="col">
             <form style="width: 80%; margin: 5% auto;"  method="POST" action="#">
@@ -875,28 +877,32 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const mostrarTodosBtn = document.getElementById("mostrarTodos");
-    const ocultarTodosBtn = document.getElementById("ocultarTodos");
-    const hiddenCards = document.querySelectorAll(".hidden-card");
-  
-    mostrarTodosBtn.addEventListener("click", function () {
-      hiddenCards.forEach(function (card) {
-        card.style.display = "block"; // Mostrar o card
-      });
-  
-      mostrarTodosBtn.style.display = "none"; // Ocultar o botão "Mostrar Todos"
-      ocultarTodosBtn.style.display = "block"; // Mostrar o botão "Ocultar Todos"
+  const mostrarTodosBtn = document.getElementById("mostrarTodos");
+  const ocultarTodosBtn = document.getElementById("ocultarTodos");
+  const hiddenCards = document.querySelectorAll(".hidden-card");
+  const servicosOferecidosSection = document.getElementById("minhas-conquistas");
+
+  mostrarTodosBtn.addEventListener("click", function () {
+    hiddenCards.forEach(function (card) {
+      card.style.display = "block"; // Mostrar o card
     });
-  
-    ocultarTodosBtn.addEventListener("click", function () {
-      hiddenCards.forEach(function (card) {
-        card.style.display = "none"; // Ocultar o card
-      });
-  
-      ocultarTodosBtn.style.display = "none"; // Ocultar o botão "Ocultar Todos"
-      mostrarTodosBtn.style.display = "block"; // Mostrar o botão "Mostrar Todos"
-    });
+
+    mostrarTodosBtn.style.display = "none"; // Ocultar o botão "Mostrar Todos"
+    ocultarTodosBtn.style.display = "block"; // Mostrar o botão "Ocultar Todos"
   });
+
+  ocultarTodosBtn.addEventListener("click", function () {
+    hiddenCards.forEach(function (card) {
+      card.style.display = "none"; // Ocultar o card
+    });
+
+    ocultarTodosBtn.style.display = "none"; // Ocultar o botão "Ocultar Todos"
+    mostrarTodosBtn.style.display = "block"; // Mostrar o botão "Mostrar Todos"
+
+    // Redirecionar a página para a seção "Serviços oferecidos"
+    servicosOferecidosSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
   </script>
   
 
