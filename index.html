@@ -30,6 +30,7 @@
             margin: 60px auto;
             font-family:'Courier New', Courier, monospace;
             color: #fff;
+            overflow: hidden;
         }
 
         .titulo-principal:after{
@@ -284,8 +285,8 @@
 
     .float{
       position:fixed;
-      width:60px;
-      height:60px;
+      width:70px;
+      height:70px;
       bottom:40px;
       right:40px;
       background-color:#0C9;
@@ -294,6 +295,7 @@
       text-align:center;
       box-shadow: 2px 2px 3px #999;
       z-index: 99999;
+      font-size: 32px;
     }
 
     .my-float{
@@ -363,6 +365,13 @@
             width: 275px;
             height: 275px;
           }
+
+          .float{
+            width:50px;
+            height:50px;
+            font-size: 20px;
+            margin: auto;
+          }
         }
     </style>
 </head>
@@ -399,7 +408,7 @@
       <!-- /navbar -->
 
       <a href="https://api.whatsapp.com/send?phone=+5518991667210&text=Olá, Pedro! Vim através do seu portfólio e gostaria de saber um pouco mais sobre os serviços!" target="_blank" class="float">
-        <i class="fa-brands fa-whatsapp my-float" style="font-size: 22px;"></i>
+        <i class="fa-brands fa-whatsapp my-float"></i>
       </a>
 
       <div id="mensagem" style="display: none;">
