@@ -25,7 +25,7 @@
         }
 
         .titulo-principal{
-            max-width: 480px;
+            max-width: 800px;
             text-align: center;
             margin: 60px auto;
             font-family:'Courier New', Courier, monospace;
@@ -225,6 +225,20 @@
 
         .icones-tecnologias:hover{
           color:#C55225;
+        }
+
+        .hidden-card{
+          display: none;
+        }
+
+        #mostrarTodos, #ocultarTodos{
+          margin: 5% auto;
+          background-color: #C55225;
+          color: #151627;
+          width: 15%;
+          border: none;
+          font-weight: bold;
+          border-radius: 5px;
         }
 
         
@@ -557,7 +571,10 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-right" data-aos-duration="1000">
+
+          <button id="mostrarTodos">Mostrar Todos</button>
+
+          <div class="col hidden-card">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="agile.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -568,7 +585,7 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col hidden-card">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="CX.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -579,7 +596,7 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-left" data-aos-duration="1000">
+          <div class="col hidden-card">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="scrum.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -590,7 +607,7 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-right" data-aos-duration="1000">
+          <div class="col hidden-card" data-aos="fade-right" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="marketing.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -601,7 +618,7 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-up" data-aos-duration="1000">
+          <div class="col hidden-card" data-aos="fade-up" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="problemas.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -612,7 +629,7 @@
               </div>
             </div>
           </div>
-          <div class="col" data-aos="fade-left" data-aos-duration="1000">
+          <div class="col hidden-card" data-aos="fade-left" data-aos-duration="1000">
             <div class="card certificado" style="background-color: #1d1e31;">
               <img src="copywriting.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
@@ -623,6 +640,7 @@
               </div>
             </div>
           </div>
+          <button id="ocultarTodos" style="display: none;">Ocultar Todos</button>
         </div>
 
 
@@ -683,7 +701,7 @@
               <!-- Message input -->
               <div class="form-outline mb-4">
                 <label class="form-label" style="color: white;" for="form4Example3">Sua mensagem</label>
-                <textarea class="form-control" id="form4Example3" rows="4" name="mensagem"></textarea>
+                <textarea class="form-control" id="form4Example3" rows="4" style="resize: none;" name="mensagem"></textarea>
               </div>
             
               <!-- Submit button -->
@@ -813,25 +831,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 
 
-// Função que será executada quando a div "projetos" entrar na viewport
-function handleIntersection(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Adicione a classe que aplica os estilos quando a div está visível
-                    document.getElementById('projetos').classList.add('projetos-visivel');
-                } else {
-                    // Remova a classe quando a div não está visível
-                    document.getElementById('projetos').classList.remove('projetos-visivel');
-                }
-            });
-        }
-
-        // Crie um IntersectionObserver
-        const observer = new IntersectionObserver(handleIntersection);
-
-        // Observe a div "projetos"
-        observer.observe(document.getElementById('projetos'));
-
 </script>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -875,27 +874,31 @@ if (window.matchMedia("(min-width: 768px)").matches) {
 </script>
 
 <script>
-  // Função para verificar se o email foi enviado
-  // Função para verificar se o email foi enviado
-function verificarEnvio() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('enviado') === 'sim') {
-        document.getElementById('mensagem').style.display = 'block';
-
-        // Ocultar a mensagem após 5 segundos
-        setTimeout(function() {
-            document.getElementById('mensagem').style.display = 'none';
-            
-            // Remover o parâmetro 'enviado' da URL e atualizar a página
-            const novaURL = window.location.href.split('?')[0];
-            window.history.replaceState({}, document.title, novaURL);
-        }, 5000);
-    }
-}
-
-// Chamar a função ao carregar a página
-window.addEventListener('load', verificarEnvio);
-</script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mostrarTodosBtn = document.getElementById("mostrarTodos");
+    const ocultarTodosBtn = document.getElementById("ocultarTodos");
+    const hiddenCards = document.querySelectorAll(".hidden-card");
+  
+    mostrarTodosBtn.addEventListener("click", function () {
+      hiddenCards.forEach(function (card) {
+        card.style.display = "block"; // Mostrar o card
+      });
+  
+      mostrarTodosBtn.style.display = "none"; // Ocultar o botão "Mostrar Todos"
+      ocultarTodosBtn.style.display = "block"; // Mostrar o botão "Ocultar Todos"
+    });
+  
+    ocultarTodosBtn.addEventListener("click", function () {
+      hiddenCards.forEach(function (card) {
+        card.style.display = "none"; // Ocultar o card
+      });
+  
+      ocultarTodosBtn.style.display = "none"; // Ocultar o botão "Ocultar Todos"
+      mostrarTodosBtn.style.display = "block"; // Mostrar o botão "Mostrar Todos"
+    });
+  });
+  </script>
+  
 
 
 </html>
