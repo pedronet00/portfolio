@@ -275,9 +275,33 @@
         justify-content: center;
         align-items: center;
     }
+
+
+
     .card img {
         max-height: 100%;
     }
+
+    .float{
+      position:fixed;
+      width:60px;
+      height:60px;
+      bottom:40px;
+      right:40px;
+      background-color:#0C9;
+      color:#FFF;
+      border-radius:50px;
+      text-align:center;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 99999;
+    }
+
+    .my-float{
+      margin-top:22px;
+    }
+
+
+
     @media (max-width: 767px) {
       .card .img-wrapper {
         height: 17em;
@@ -374,6 +398,10 @@
       </nav>
       <!-- /navbar -->
 
+      <a href="https://api.whatsapp.com/send?phone=+5518991667210&text=Olá, Pedro! Vim através do seu portfólio e gostaria de saber um pouco mais sobre os serviços!" target="_blank" class="float">
+        <i class="fa-brands fa-whatsapp my-float" style="font-size: 22px;"></i>
+      </a>
+
       <div id="mensagem" style="display: none;">
         Email enviado com sucesso!
       </div>
@@ -384,14 +412,14 @@
         <div class="row">
 
           <div class="col inicio">
-            <h1 class="titulo-principal title" data-aos="fade-up" data-aos-duration="3000"></h1>
+            <h1 class="titulo-principal title" data-aos="fade-right" data-aos-duration="3000"></h1>
             <br/>
-            <p style="color: white; font-size: 25px;" data-aos="fade-up" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
+            <p style="color: white; font-size: 25px;" data-aos="fade-right" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
             <br/>
-            <a href="#projetos" class="ver-projetos" data-aos="fade-up" data-aos-duration="2000">Ver projetos</a>
+            <a href="#projetos" class="ver-projetos" data-aos="fade-right" data-aos-duration="2000">Ver projetos</a>
           </div>
 
-            <img src="img/programmer.png" id="programmer" style="width: 600px; height: 400px;">
+            <img src="img/programmer.png" id="programmer" style="width: 600px; height: 400px;" data-aos="fade-left" data-aos-duration="3000">
             
         </div>
         <div class="col">
