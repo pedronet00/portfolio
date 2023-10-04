@@ -56,7 +56,7 @@
           font-family: 'Quantico', sans-serif;
         }
 
-        #minhas-conquistas{
+        #minhas_conquistas{
           text-align: center;
           color: #C55225; 
           font-size: 50px; 
@@ -146,7 +146,7 @@
 
         
 
-        #sobre-mim{
+        #sobre_mim{
           text-align: center; 
           font-family: 'Quantico', sans-serif; 
           color:#C55225;
@@ -194,7 +194,7 @@
           margin-top: 5%; 
           margin-left: 5%;
         }
-        #servicos-oferecidos{
+        #servicos_oferecidos{
           text-align: center; 
           font-size: 50px; 
           color: #C55225; 
@@ -359,6 +359,7 @@
 
           .title{
             text-align: center;
+            overflow-y: hidden;
           }
 
           #logo{
@@ -430,6 +431,15 @@
           .img-certificado{
             height: 225px;
           }
+
+          #mostrarTodos{
+            position: fixed;
+          }
+
+          .title{
+            text-align: center;
+            overflow-y: hidden;
+          }
         }
     </style>
 </head>
@@ -445,34 +455,32 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                   <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Home</a>
+                          <a class="nav-link" id="home_nav" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#quem-sou">Quem Sou</a>
+                          <a class="nav-link" id="quem_sou_nav" href="#quem-sou">Quem Sou</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#projetos">Projetos</a>
+                          <a class="nav-link" id="projetos_nav" href="#projetos">Projetos</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" target="_blank" href="https://drive.google.com/file/d/1k2BvEgwNI--Sfqaki5W0_FEEvT-0Uml2/view?usp=sharing">Currículo</a>
+                          <a class="nav-link" id="cv_nav" target="_blank" href="https://drive.google.com/file/d/1k2BvEgwNI--Sfqaki5W0_FEEvT-0Uml2/view?usp=sharing">Currículo</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#contato">Contato</a>
+                          <a class="nav-link" id="contato_nav" href="#contato">Contato</a>
                       </li>
                   </ul>
+                  <button id="botaoPortugues" style="background: none; border: none; margin-left: 5%;"><img src="img/brasil.png" style="width: 35px; height: 20px;"></button>
+                  <button id="botaoIngles" style="background: none; border: none;"><img src="img/eua.png" style="width: 35px; height: 20px;"></button>
               </div>
-          </div>
+          </div> 
       </nav>
+      
       <!-- /navbar -->
 
       <a href="https://api.whatsapp.com/send?phone=+5518991667210&text=Olá, Pedro! Vim através do seu portfólio e gostaria de saber um pouco mais sobre os serviços!" target="_blank" class="float">
         <i class="fa-brands fa-whatsapp my-float"></i>
       </a>
-
-      <div id="mensagem" style="display: none;">
-        Email enviado com sucesso!
-      </div>
-
 
       <!-- 1st section -->
       <div class="container" style="margin-bottom: 15%; margin-top: 12%;">
@@ -483,9 +491,9 @@
               <h1 class="titulo-principal title" data-aos="fade-right" data-aos-duration="3000"></h1>
             </div>
             <br/>
-            <p style="color: white; font-size: 25px;" data-aos="fade-right" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
+            <p style="color: white; font-size: 25px;" id="proposito" data-aos="fade-right" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
             <br/>
-            <a href="#projetos" class="ver-projetos" data-aos="fade-right" data-aos-duration="2000">Ver projetos</a>
+            <a href="#projetos" class="ver-projetos" id="ver_projetos" data-aos="fade-right" data-aos-duration="2000">Ver projetos</a>
           </div>
 
             <img src="img/programmer.png" class="img-fluid rounded-start pulse-image" id="programmer" style="" data-aos="fade-left" data-aos-duration="3000">
@@ -508,15 +516,15 @@
           </div>
           <div class="col-md-8" data-aos="fade-right" data-aos-duration="2000">
             <div class="card-body">
-              <h2 class="card-title" id="sobre-mim">Um pouco sobre mim 🌱</h2>
+              <h2 class="card-title" id="sobre_mim">Um pouco sobre mim 🌱</h2>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #61ed46; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
+              <p class="card-text" id="sobre_mim_1" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #61ed46; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Como disse antes, comecei aprendendo HTML e CSS. Depois, ao entrar na faculdade, comecei a ver linguagens de programação, como C e C#. No trabalho, desenvolvi um pouco de conhecimento em <span style="color:#C55225; font-weight: bold;">PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, dentre outras tecnologias, fazendo cursos e aplicando no dia-a-dia da empresa. Gosto muito de PHP, pois foi a primeira linguagem que consegui fazer um CRUD sozinho, depois de tentar muito - e errar muito.</p>
+              <p class="card-text" id="sobre_mim_2" style="text-align: center; width: 80%; margin: auto;">Como disse antes, comecei aprendendo HTML e CSS. Depois, ao entrar na faculdade, comecei a ver linguagens de programação, como C e C#. No trabalho, desenvolvi um pouco de conhecimento em <span style="color:#C55225; font-weight: bold;">PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, dentre outras tecnologias, fazendo cursos e aplicando no dia-a-dia da empresa. Gosto muito de PHP, pois foi a primeira linguagem que consegui fazer um CRUD sozinho, depois de tentar muito - e errar muito.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: #61ed46; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
+              <p class="card-text" id="sobre_mim_3" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: #61ed46; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
+              <p class="card-text" id="sobre_mim_4" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
             </div>
             
           </div>
@@ -531,15 +539,15 @@
 
        
         <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
-          <h3 class="title stacks" style="text-align: center;">Projetos desenvolvidos</h3>
+          <h3 class="title stacks" id="projetos_desenvolvidos" style="text-align: center;">Projetos desenvolvidos</h3>
           <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
                     <div class="img-wrapper" style="height: 300px;"><img src="img/invision.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InVision &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> PHP, Laravel, Jetstream, Livewire, MySQL, JS</p>
+                          <p class="card-text" id="invision_texto">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">PHP, Laravel, Jetstream, Livewire, MySQL, JS</span></p>
                           
                       </div>
                   </div>
@@ -549,8 +557,8 @@
                       <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-1.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InData &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, PHP, Laravel, MySQL, JS</p>
+                          <p class="card-text" id="indata_texto">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, PHP, Laravel, MySQL, JS</span></p>
                       </div>
                   </div>
               </div>
@@ -559,8 +567,8 @@
                     <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-2.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Costs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, JSON como DataBase</p>
+                          <p class="card-text" id="costs_texto">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;" id="tecnologias_movietag">HTML, CSS, JS, React, JSON como DataBase</span></p>
                     </div>
                 </div>
             </div>
@@ -569,8 +577,8 @@
                     <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-3.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Movie Tag &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, API IMDB</p>
+                          <p class="card-text" id="movietag_texto">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, JS, React, API IMDB</span></p>
                     </div>
                 </div>
             </div>
@@ -579,8 +587,8 @@
                       <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-4.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Apoleon &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Produto para uma empresa que produz software e presta serviços de marketing.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS</p>
+                          <p class="card-text" id="apoleon_texto">Produto para uma empresa que produz software e presta serviços de <br/>marketing, como identidade visual, criação de posts, etc.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, JS</span></p>
                       </div>
                   </div>
               </div>
@@ -598,7 +606,7 @@
 
 
       <div class="container" data-aos="flip-left" data-aos-duration="2000" style="margin: auto; margin-top: 8%;">
-        <h3 class="title stacks" style="text-align: center;">Stacks dominadas</h3>
+        <h3 class="title stacks" id="stacks_dominadas" style="text-align: center;">Stacks dominadas</h3>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="margin: auto; margin-top: 5%;">
           <div class="col">
             <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-html5" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML"></i></div>
@@ -635,7 +643,7 @@
 
       <section class="certificados-servicos">
         <br/><br/>
-        <h2 id="minhas-conquistas">Minhas conquistas</h2>
+        <h2 id="minhas_conquistas">Minhas conquistas</h2>
         <br/><br/>
         <div class="row row-cols-1 row-cols-md-3 g-4 certificados">
           
@@ -645,8 +653,7 @@
                 alt="Hollywood Sign on The Hill" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Git & GitHub</h5>
-                <p class="card-text">
-                  Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.
+                <p class="card-text" id="git_texto">Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.
                 </p>
               </div>
             </div>
@@ -657,8 +664,7 @@
                 alt="Palm Springs Road" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Success</h5>
-                <p class="card-text">
-                  Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.
+                <p class="card-text" id="cs_texto">Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.
                 </p>
               </div>
             </div>
@@ -669,7 +675,7 @@
                 alt="Los Angeles Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">ReactJS Essential Training</h5>
-                <p class="card-text">Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.</p>
+                <p class="card-text" id="react_texto">Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.</p>
               </div>
             </div>
           </div>
@@ -681,8 +687,8 @@
               <img src="img/agile.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Desenvolvimento Ágil de Software</h5>
-                <p class="card-text">Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="agile_titulo">Desenvolvimento Ágil de Software</h5>
+                <p class="card-text" id="agile_texto">Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.
                 </p>
               </div>
             </div>
@@ -693,7 +699,7 @@
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Experience</h5>
-                <p class="card-text">De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.
+                <p class="card-text" id="cx_texto">De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.
                 </p>
               </div>
             </div>
@@ -703,8 +709,8 @@
               <img src="img/scrum.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do SCRUM</h5>
-                <p class="card-text">Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, <i>sprints, backlogs, </i> etc.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="scrum_titulo">Fundamentos do SCRUM</h5>
+                <p class="card-text" id="scrum_texto">Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, <i>sprints, backlogs, </i> etc.
                 </p>
               </div>
             </div>
@@ -714,8 +720,8 @@
               <img src="img/marketing.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do Marketing Digital</h5>
-                <p class="card-text">Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="marketing_titulo">Fundamentos do Marketing Digital</h5>
+                <p class="card-text" id="marketing_texto">Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.
                 </p>
               </div>
             </div>
@@ -725,8 +731,8 @@
               <img src="img/problemas.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Técnicas de Resolução de Problemas</h5>
-                <p class="card-text">Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="problemas_titulo">Técnicas de Resolução de Problemas</h5>
+                <p class="card-text" id="problemas_texto">Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.
                 </p>
               </div>
             </div>
@@ -737,7 +743,7 @@
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">CopyWriting</h5>
-                <p class="card-text">Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc
+                <p class="card-text" id="copywriting_texto">Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc
                 </p>
               </div>
             </div>
@@ -746,16 +752,16 @@
         </div>
 
 
-        <div class="servicos_oferecidos" id="servicos_oferecidos">
+        <div class="servicos_oferecidos" id="servicos-oferecidos">
           <br/><br/><br/>
-          <h2 id="servicos-oferecidos">Serviços oferecidos</h2>
+          <h2 id="servicos_oferecidos">Serviços oferecidos</h2>
           <div class="servicos row">
             <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="1000">
               <img src="img/icon-1.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Desenvolvimento de Software</h5>
-                <p class="card-text servicos-texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
+                <h5 class="card-title topicos-servicos" id="servicos_desenvolvimento_titulo">Desenvolvimento de Software</h5>
+                <p class="card-text servicos-texto" id="servicos_desenvolvimento_texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
               </div>
             </div>
         
@@ -763,8 +769,8 @@
               <img src="img/icon-2.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Prototipação</h5>
-                <p class="card-text servicos-texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
+                <h5 class="card-title topicos-servicos" id="servicos_prototipacao_titulo">Prototipação</h5>
+                <p class="card-text servicos-texto" id="servicos_prototipacao_texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
               </div>
             </div>
         
@@ -772,8 +778,8 @@
               <img src="img/icon-3.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Copywriting & SEO</h5>
-                <p class="card-text servicos-texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
+                <h5 class="card-title topicos-servicos" id="servicos_copywriting_titulo">Copywriting & SEO</h5>
+                <p class="card-text servicos-texto" id="servicos_copywriting_texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
               </div>
             </div>
         </div>
@@ -783,33 +789,21 @@
         <h2 style="text-align: center; color: white;">Quer solicitar um serviço? <span style="color: #C55225;">Entre em contato!</span></h2>
 
         <div class="row">
-          <div class="col">
-            <img src="img/email.png" class="img-email">
-          </div>
-          <div class="col">
-            <form style="width: 80%; margin: 5% auto;"  method="POST" action="#" class="form-contato">
-              <!-- Name input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example1" style="color: white;">Nome</label>
-                <input type="text" id="form4Example1" class="form-control" name="nome" />
+            <form style="width: 60%; margin: 5% auto; color: white;">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Seu nome</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
-            
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" style="color: white;" for="form4Example2">E-mail</label>
-                <input type="email" id="form4Example2" class="form-control" name="email"/>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
-            
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" style="color: white;" for="form4Example3">Sua mensagem</label>
-                <textarea class="form-control" id="form4Example3" rows="4" style="resize: none;" name="mensagem"></textarea>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Deixe sua mensagem aqui</label>
+                <textarea type="password" class="form-control" id="exampleInputPassword1" style="resize: none;"></textarea>
               </div>
-            
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-block mb-4" style="background-color: #C55225; color:#151627; font-weight: bold;">Enviar mensagem</button>
+              <button type="submit" class="btn" style="background-color: #C55225; color: #151627; font-weight: bold;">Enviar mensagem</button>
             </form>
-          </div>
         </div>
       </div>
 
@@ -872,7 +866,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: #151627;">
-    <p style="font-size: 12px;"><i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b></p>
+    <p style="font-size: 12px;" id="versiculo"><i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b></p>
   </div>
   <!-- Copyright -->
         </footer>
@@ -972,7 +966,7 @@ const titulo = document.querySelector('.titulo-principal');
     const mostrarTodosBtn = document.getElementById("mostrarTodos");
     const ocultarTodosBtn = document.getElementById("ocultarTodos");
     const hiddenCards = document.querySelectorAll(".hidden-card");
-    const servicosOferecidosSection = document.getElementById("minhas-conquistas");
+    const servicosOferecidosSection = document.getElementById("minhas_conquistas");
 
     mostrarTodosBtn.addEventListener("click", function () {
         hiddenCards.forEach(function (card) {
@@ -995,6 +989,163 @@ const titulo = document.querySelector('.titulo-principal');
         servicosOferecidosSection.scrollIntoView({ behavior: "smooth" });
     });
     });
+
+
+
+
+    const textos = {
+      portugues: {
+        home_nav: "Início",
+        quem_sou_nav: "Quem Sou?",
+        projetos_nav: "Projetos",
+        cv_nav: "Currículo",
+        contato_nav: "Contato",
+        proposito: "Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo.",
+        ver_projetos: "Ver projetos",
+        sobre_mim: "Um pouco sobre mim 🌱",
+        sobre_mim_1: "Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style='color: #61ed46; font-weight: bold;'>programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.",
+        sobre_mim_2: "Como disse antes, comecei aprendendo HTML e CSS. Depois, ao entrar na faculdade, comecei a ver linguagens de programação, como C e C#. No trabalho, desenvolvi um pouco de conhecimento em <span style='color:#C55225; font-weight: bold;'>PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, dentre outras tecnologias, fazendo cursos e aplicando no dia-a-dia da empresa. Gosto muito de PHP, pois foi a primeira linguagem que consegui fazer um CRUD sozinho, depois de tentar muito - e errar muito.",
+        sobre_mim_3: "Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style='color: #61ed46; font-weight: bold;'>nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.",
+        sobre_mim_4: "Clique <a style='text-decoration: none; color: #C55225; font-weight: bold;' href='https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548' target='_blank'>aqui</a> para ouvir minha música preferida!",
+        projetos_desenvolvidos: "Projetos desenvolvidos",
+        stacks_dominadas: "Stacks dominadas",
+        minhas_conquistas: "Minhas conquistas",
+        servicos_oferecidos: "Serviços oferecidos",
+        servicos_desenvolvimento_titulo: "Desenvolvimento de Software",
+        servicos_prototipacao_titulo: "Prototipação",
+        servicos_copywriting_titulo: "Copywriting & SEO",
+        servicos_desenvolvimento_texto: "Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.",
+        servicos_prototipacao_texto: "Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!",
+        servicos_copywriting_texto: "Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site!",
+        git_texto: "Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.",
+        cs_texto: "Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.",
+        react_texto: "Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.",
+        agile_titulo: "Desenvolvimento Ágil de Software",
+        agile_texto: "Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.",
+        cx_texto: "De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.",
+        scrum_titulo: "Fundamentos do SCRUM",
+        scrum_texto: "Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, sprints, backlogs, etc.",
+        marketing_titulo: "Fundamentos do Marketing Digital",
+        marketing_texto: "Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.",
+        problemas_titulo: "Técnicas de Resolução de Problemas",
+        problemas_texto: "Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.",
+        copywriting_texto: "Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc",
+        invision_texto: "Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.",
+        indata_texto: "Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.",
+        costs_texto: "Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.",
+        movietag_texto: "Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!",
+        apoleon_texto: "Produto para uma empresa que produz software e presta serviços de <br/>marketing, como identidade visual, criação de posts, etc.",
+        versiculo: "<i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b>",
+        tecnologias_movietag: "HTML, CSS, JS, React, JSON como DataBase",
+
+      },
+      ingles: {
+        home_nav: "Home",
+        quem_sou_nav: "Who am I?",
+        projetos_nav: "Projects",
+        cv_nav: "CV",
+        contato_nav: "Contact",
+        proposito: "Creating solutions, solving problems: that's my passion, and that's what I study for.",
+        ver_projetos: "My projects",
+        sobre_mim: "A little about myself 🌱",
+        sobre_mim_1: "Hello! My name is Pedro, I'm 20 years old and I'm from Presidente Prudente, in the interior of São Paulo. I discovered my love for development in mid-2020, when I was still at school, and, by chance, I ended up researching something about HTML on YouTube. Since then, <span style='color: #61ed46; font-weight: bold;'>programming has never left my mind</span>, but I would only start attending college in 2021, where I entered UFGD, on the Information Systems course. For personal reasons, I ended up transferring to Centro Universitário Toledo, here in my hometown, where I am currently in the 6th term of the course.",
+        sobre_mim_2: "As I said before, I started by learning HTML and CSS. Then, when I entered college, I started looking at a few programming languages, like C and C#. At work, I developed a little knowledge in <span style='color:#C55225; font-weight: bold;'>PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, among other technologies, taking courses and applying them in the company's day-to-day activities. I really like PHP, as it was the first language that I managed to do a CRUD on my own, after trying a lot - and making a lot of mistakes.",
+        sobre_mim_3: "Speaking of extra-professional aspects, I am passionate about music and, if I could, I would have all the instruments in the world. Music is my therapy and my escape from many hours on the computer. Music is also one of the biggest responsible for instilling my sense of curiosity, because <span style='color: #61ed46; font-weight: bold;'>I am never satisfied and always want to learn more and more</span>, and this ends up affecting my professional life as well. Furthermore, I really enjoy reading, watching films and series and being with my family and friends in my free time.",
+        sobre_mim_4: "Click <a style='text-decoration: none; color: #C55225; font-weight: bold;' href='https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548' target='_blank'>here</a> to listen my favourite song!",
+        projetos_desenvolvidos: "Developed projects",
+        stacks_dominadas: "Mastered stacks",
+        minhas_conquistas: "My achievements",
+        servicos_oferecidos: "Offered services",
+        servicos_desenvolvimento_titulo: "Software developing",
+        servicos_prototipacao_titulo: "Prototyping",
+        servicos_copywriting_titulo: "Copywriting & SEO",
+        servicos_desenvolvimento_texto: "Programming in general. Here, I am available to solve problems, develop personalized solutions and offer a quality product in its final delivery! Until now, I use the stacks mentioned above for software development.",
+        servicos_prototipacao_texto: "No sitting in front of the computer and programming aimlessly! Product prototyping is an extremely important step, and I make a point of not leaving it behind. With Figma, you can see what the final software will look like, even before it is produced!",
+        servicos_copywriting_texto: "In addition to all this, I also leave the software with excellent texts so that the site is well ranked by Google in terms of SEO. Using correct keywords and tags makes a difference to search engines, so it is extremely important to maintain good copy on the website!",
+        git_texto: "Here, I learned about repositories, pushes, pulls, commits and code versioning.",
+        cs_texto: "I practiced the main Customer Success techniques, taking theoretical and practical classes and, at the end, a test of knowledge about the course.",
+        react_texto: "I coded ReactJS components, routes, functions and libraries in general.",
+        agile_titulo: "Agile methods",
+        agile_texto: "In this course, I learned a little about the main agile software development methods, their characteristics and applicability.",
+        cx_texto: "In a similar way to the Customer Success course, I developed the main concepts of Customer Experience, taking a test at the end of the course.",
+        scrum_titulo: "SCRUM fundamentals",
+        scrum_texto: "Here, I further developed the ideas of the SCRUM methodology, such as daily meetings, artifacts, sprints, backlogs, etc.",
+        marketing_titulo: "Digital Marketing Fundamentals",
+        marketing_texto: "In this course, I practiced the fundamentals of Digital Marketing, strategies to reach more people, campaign techniques, etc.",
+        problemas_titulo: "Problems solving techniques",
+        problemas_texto: "I practiced some ways of solving business problems, such as the GUT matrix, validating the urgency of activities, among others.",
+        copywriting_texto: "I learned about persuasive writing, how to write good copies, be objective, develop personas, etc.",
+        invision_texto: "A project that offers the definition of the GUT and SWOT matrix for the user to use in their projects.",
+        indata_texto: "A project manager, with creating profiles, adding services to projects, etc.",
+        costs_texto: "A project whose objective is to manage the user's finances. Project coming from YouTube.",
+        movietag_texto: "Here, you will find the best movies ranked by IMDB in one place! Another project coming from YouTube.",
+        apoleon_texto: "Product for a company that produces software and provides IT services and marketing, such as visual identity, creating posts, etc.",
+        versiculo: "<i>For from him and through him and for him are all things. To him be the glory forever! Amen.</i><br/><b>Romans 11:36</b>",
+        tecnologias_movietag: "HTML, CSS, JS, React, JSON as DataBase",
+      }
+    };
+
+    let idiomaAtual = "portugues";
+
+    function alternarIdiomaParaPortugues() {
+      idiomaAtual = "portugues";
+      atualizarTextos();
+    }
+
+    function alternarIdiomaParaIngles() {
+      idiomaAtual = "ingles";
+      atualizarTextos();
+    }
+
+    function atualizarTextos() {
+      document.getElementById("home_nav").innerHTML  = textos[idiomaAtual].home_nav;
+      document.getElementById("quem_sou_nav").innerHTML  = textos[idiomaAtual].quem_sou_nav;
+      document.getElementById("projetos_nav").innerHTML  = textos[idiomaAtual].projetos_nav;
+      document.getElementById("cv_nav").innerHTML  = textos[idiomaAtual].cv_nav;
+      document.getElementById("contato_nav").innerHTML  = textos[idiomaAtual].contato_nav;
+      document.getElementById("proposito").innerHTML  = textos[idiomaAtual].proposito;
+      document.getElementById("ver_projetos").innerHTML  = textos[idiomaAtual].ver_projetos;      
+      document.getElementById("sobre_mim").innerHTML  = textos[idiomaAtual].sobre_mim;
+      document.getElementById("sobre_mim_1").innerHTML  = textos[idiomaAtual].sobre_mim_1;
+      document.getElementById("sobre_mim_2").innerHTML  = textos[idiomaAtual].sobre_mim_2;
+      document.getElementById("sobre_mim_3").innerHTML  = textos[idiomaAtual].sobre_mim_3;
+      document.getElementById("sobre_mim_4").innerHTML  = textos[idiomaAtual].sobre_mim_4;
+      document.getElementById("projetos_desenvolvidos").innerHTML  = textos[idiomaAtual].projetos_desenvolvidos;
+      document.getElementById("stacks_dominadas").innerHTML  = textos[idiomaAtual].stacks_dominadas;
+      document.getElementById("minhas_conquistas").innerHTML  = textos[idiomaAtual].minhas_conquistas;
+      document.getElementById("servicos_oferecidos").innerHTML  = textos[idiomaAtual].servicos_oferecidos;
+      document.getElementById("servicos_desenvolvimento_titulo").innerHTML  = textos[idiomaAtual].servicos_desenvolvimento_titulo;
+      document.getElementById("servicos_prototipacao_titulo").innerHTML  = textos[idiomaAtual].servicos_prototipacao_titulo;
+      document.getElementById("servicos_copywriting_titulo").innerHTML  = textos[idiomaAtual].servicos_copywriting_titulo;
+      document.getElementById("servicos_desenvolvimento_texto").innerHTML  = textos[idiomaAtual].servicos_desenvolvimento_texto;
+      document.getElementById("servicos_prototipacao_texto").innerHTML  = textos[idiomaAtual].servicos_prototipacao_texto;
+      document.getElementById("servicos_copywriting_texto").innerHTML  = textos[idiomaAtual].servicos_copywriting_texto;
+      document.getElementById("git_texto").innerHTML  = textos[idiomaAtual].git_texto;
+      document.getElementById("cs_texto").innerHTML  = textos[idiomaAtual].cs_texto;
+      document.getElementById("react_texto").innerHTML  = textos[idiomaAtual].react_texto;
+      document.getElementById("agile_titulo").innerHTML  = textos[idiomaAtual].agile_titulo;
+      document.getElementById("agile_texto").innerHTML  = textos[idiomaAtual].agile_texto;
+      document.getElementById("cx_texto").innerHTML  = textos[idiomaAtual].cx_texto;
+      document.getElementById("scrum_titulo").innerHTML  = textos[idiomaAtual].scrum_titulo;
+      document.getElementById("scrum_texto").innerHTML  = textos[idiomaAtual].scrum_texto;
+      document.getElementById("marketing_titulo").innerHTML  = textos[idiomaAtual].marketing_titulo;
+      document.getElementById("marketing_texto").innerHTML  = textos[idiomaAtual].marketing_texto;
+      document.getElementById("problemas_titulo").innerHTML  = textos[idiomaAtual].problemas_titulo;
+      document.getElementById("problemas_texto").innerHTML  = textos[idiomaAtual].problemas_texto;
+      document.getElementById("copywriting_texto").innerHTML  = textos[idiomaAtual].copywriting_texto;
+      document.getElementById("invision_texto").innerHTML  = textos[idiomaAtual].invision_texto;
+      document.getElementById("indata_texto").innerHTML  = textos[idiomaAtual].indata_texto;
+      document.getElementById("costs_texto").innerHTML  = textos[idiomaAtual].costs_texto;
+      document.getElementById("movietag_texto").innerHTML  = textos[idiomaAtual].movietag_texto;
+      document.getElementById("apoleon_texto").innerHTML  = textos[idiomaAtual].apoleon_texto;
+      document.getElementById("versiculo").innerHTML  = textos[idiomaAtual].versiculo;
+      document.getElementById("tecnologias_movietag").innerHTML  = textos[idiomaAtual].tecnologias_movietag;
+    }
+
+    document.getElementById("botaoPortugues").addEventListener("click", alternarIdiomaParaPortugues);
+    document.getElementById("botaoIngles").addEventListener("click", alternarIdiomaParaIngles);
+
+
 
 </script>
 
