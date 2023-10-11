@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<div lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Stabile Neto | Desenvolvedor FullStack</title>
-    <link rel="icon" type="image/x-icon" href="img/vector.png">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +55,7 @@
           font-family: 'Quantico', sans-serif;
         }
 
-        #minhas-conquistas{
+        #minhas_conquistas{
           text-align: center;
           color: #C55225; 
           font-size: 50px; 
@@ -146,7 +145,7 @@
 
         
 
-        #sobre-mim{
+        #sobre_mim{
           text-align: center; 
           font-family: 'Quantico', sans-serif; 
           color:#C55225;
@@ -194,7 +193,7 @@
           margin-top: 5%; 
           margin-left: 5%;
         }
-        #servicos-oferecidos{
+        #servicos_oferecidos{
           text-align: center; 
           font-size: 50px; 
           color: #C55225; 
@@ -206,6 +205,10 @@
         .servicos-container{
           border: none; 
           background-color: #1d1e31;
+        }
+
+        .carousel-item{
+          margin-left: 2%;
         }
 
         .servicos-texto{
@@ -359,6 +362,7 @@
 
           .title{
             text-align: center;
+            overflow-y: hidden;
           }
 
           #logo{
@@ -430,13 +434,22 @@
           .img-certificado{
             height: 225px;
           }
+
+          #mostrarTodos{
+            position: fixed;
+          }
+
+          .title{
+            text-align: center;
+            overflow-y: hidden;
+          }
         }
     </style>
 </head>
 
 
       <!-- navbar -->
-      <nav class="navbar navbar-expand-lg" style="background-color: #151627;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #151627;">
           <div class="container">
               <a class="navbar-brand" id="logo" href="#"><span>&lt;</span> Pedro Stabile Neto <span>/&gt;</span></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -445,36 +458,29 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                   <ul class="navbar-nav">
                       <li class="nav-item">
-                          <a class="nav-link" href="#">Home</a>
+                          <a class="nav-link" id="home_nav" href="#">Home</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#quem-sou">Quem Sou</a>
+                          <a class="nav-link" id="quem_sou_nav" href="#quem-sou">Quem Sou</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#projetos">Projetos</a>
+                          <a class="nav-link" id="projetos_nav" href="#projetos">Projetos</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" target="_blank" href="https://drive.google.com/file/d/1k2BvEgwNI--Sfqaki5W0_FEEvT-0Uml2/view?usp=sharing">Currículo</a>
+                          <a class="nav-link" id="cv_nav" target="_blank" href="https://drive.google.com/file/d/1k2BvEgwNI--Sfqaki5W0_FEEvT-0Uml2/view?usp=sharing">Currículo</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="#contato">Contato</a>
+                          <a class="nav-link" id="contato_nav" href="#contato">Contato</a>
                       </li>
                   </ul>
               </div>
-          </div>
-      </nav>
+          </div> 
+    </nav>
+      
       <!-- /navbar -->
 
-      <a href="https://api.whatsapp.com/send?phone=+5518991667210&text=Olá, Pedro! Vim através do seu portfólio e gostaria de saber um pouco mais sobre os serviços!" target="_blank" class="float">
-        <i class="fa-brands fa-whatsapp my-float"></i>
-      </a>
-
-      <div id="mensagem" style="display: none;">
-        Email enviado com sucesso!
-      </div>
-
-
-      <!-- 1st section -->
+      <a href="https://api.whatsapp.com/send?phone=+5518991667210&text=Olá, Pedro! Vim através do seu portfólio e gostaria de saber um pouco mais sobre os serviços!" target="_blank" class="float"><i class="fa-brands fa-whatsapp my-float"></i></a>
+      
       <div class="container" style="margin-bottom: 15%; margin-top: 12%;">
         <div class="row">
 
@@ -483,9 +489,9 @@
               <h1 class="titulo-principal title" data-aos="fade-right" data-aos-duration="3000"></h1>
             </div>
             <br/>
-            <p style="color: white; font-size: 25px;" data-aos="fade-right" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
+            <p style="color: white; font-size: 25px;" id="proposito" data-aos="fade-right" data-aos-duration="3000">Criar soluções, resolver problemas: essa é a minha paixão, e é para isso que eu estudo. </p>
             <br/>
-            <a href="#projetos" class="ver-projetos" data-aos="fade-right" data-aos-duration="2000">Ver projetos</a>
+            <a href="#projetos" class="ver-projetos" id="ver_projetos" data-aos="fade-right" data-aos-duration="2000">Ver projetos</a>
           </div>
 
             <img src="img/programmer.png" class="img-fluid rounded-start pulse-image" id="programmer" style="" data-aos="fade-left" data-aos-duration="3000">
@@ -494,93 +500,84 @@
         <div class="col">
           
         </div>
-      </div>
-      <!-- /1st section -->
+      </div>    
 
-
-
-
-       <!-- 2nd section -->
-       <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%; display: flex; justify-content: center;">
+      <div class="card mb-3" id="quem-sou" style="width: 100%; background-color: #1d1e31; color: white; margin-top: 5%; display: flex; justify-content: center;">
         <div class="row g-0" style="display: flex; align-items: center;">
           <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
             <img src="img/vector.png" class="img-fluid rounded-start pulse-image" alt="...">
           </div>
           <div class="col-md-8" data-aos="fade-right" data-aos-duration="2000">
             <div class="card-body">
-              <h2 class="card-title" id="sobre-mim">Um pouco sobre mim 🌱</h2>
+              <h2 class="card-title" id="sobre_mim">Um pouco sobre mim 🌱</h2>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #61ed46; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
+              <p class="card-text" id="sobre_mim_1" style="text-align: center; width: 80%; margin: auto;">Olá! Me chamo Pedro, tenho 20 anos e sou de Presidente Prudente, interior de São Paulo. Descobri o gosto por desenvolvimento na metade de 2020, quando ainda estava na escola, e, por um acaso, acabei pesquisando algo sobre HTML no YouTube. Desde então, a <span style="color: #61ed46; font-weight: bold;">programação nunca saiu da minha cabeça</span>, mas só iria começar a cursar uma faculdade de fato em 2021, onde ingressei na UFGD, no curso de Sistemas de Informação. Por motivos pessoais, acabei me transferindo para o Centro Universitário Toledo, aqui na minha cidade, onde, atualmente, estou no 6º termo do curso.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Como disse antes, comecei aprendendo HTML e CSS. Depois, ao entrar na faculdade, comecei a ver linguagens de programação, como C e C#. No trabalho, desenvolvi um pouco de conhecimento em <span style="color:#C55225; font-weight: bold;">PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, dentre outras tecnologias, fazendo cursos e aplicando no dia-a-dia da empresa. Gosto muito de PHP, pois foi a primeira linguagem que consegui fazer um CRUD sozinho, depois de tentar muito - e errar muito.</p>
+              <p class="card-text" id="sobre_mim_2" style="text-align: center; width: 80%; margin: auto;">Como disse antes, comecei aprendendo HTML e CSS. Depois, ao entrar na faculdade, comecei a ver linguagens de programação, como C e C#. No trabalho, desenvolvi um pouco de conhecimento em <span style="color:#C55225; font-weight: bold;">PHP, MySQL, JavaScript, Laravel, React, Git & GitHub</span>, dentre outras tecnologias, fazendo cursos e aplicando no dia-a-dia da empresa. Gosto muito de PHP, pois foi a primeira linguagem que consegui fazer um CRUD sozinho, depois de tentar muito - e errar muito.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: #61ed46; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
+              <p class="card-text" id="sobre_mim_3" style="text-align: center; width: 80%; margin: auto;">Falando de aspectos extra-profissionais, sou apaixonado por música e, se pudesse, teria todos os instrumentos do mundo. Música é minha terapia e meu escape das várias horas no computador. É também a música uma das maiores responsáveis por instigar meu senso de curiosidade, porquê eu <span style="color: #61ed46; font-weight: bold;">nunca estou satisfeito e sempre quero aprender mais e mais</span>, e isso acaba refletindo na minha vida profissional também. Além disso, gosto muito de ler, assistir filmes e séries e estar com minha família e amigos no tempo livre.</p>
               <br/>
-              <p class="card-text" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
+              <p class="card-text" id="sobre_mim_4" style="text-align: center; width: 80%; margin: auto;">Clique <a style="text-decoration: none; color: #C55225; font-weight: bold;" href="https://open.spotify.com/intl-pt/track/2CGHs4oV800F94fKCzIUIt?si=87dc7aa4f6404548" target="_blank">aqui</a> para ouvir minha música preferida!</p>
             </div>
             
           </div>
         </div>
         
-       </div>
-      <!-- /2nd section -->
-
-        
-
+      </div>      
+      
       <div id="projetos"></div>
-
        
-        <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto;">
-          <h3 class="title stacks" style="text-align: center;">Projetos desenvolvidos</h3>
+      <div id="carouselExampleControls" class="carousel" style="width: 90%; margin: auto; padding: 5%;">
+          <h3 class="title stacks" id="projetos_desenvolvidos" style="text-align: center;">Projetos desenvolvidos</h3>
           <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
+                  <div class="card" data-aos="fade-bottom" data-aos-duration="2000">
                     <div class="img-wrapper" style="height: 300px;"><img src="img/invision.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InVision &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> PHP, Laravel, Jetstream, Livewire, MySQL, JS</p>
+                          <p class="card-text" id="invision_texto">Projeto que oferece a definição da matriz GUT e SWOT para o usuário utilizar em seus projetos.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">PHP, Laravel, Jetstream, Livewire, MySQL, JS</span></p>
                           
                       </div>
                   </div>
               </div>
               <div class="carousel-item" >
-                  <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
+                  <div class="card" data-aos="fade-bottom" data-aos-duration="2000">
                       <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-1.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">InData &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, PHP, Laravel, MySQL, JS</p>
+                          <p class="card-text" id="indata_texto">Um gerenciador de projetos, com a criação de perfis, adição de serviços nos projetos, etc.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, PHP, Laravel, MySQL, JS</span></p>
                       </div>
                   </div>
               </div>
               <div class="carousel-item" >
-                <div class="card" style="margin-left: 5%;" data-aos="fade-bottom" data-aos-duration="2000">
+                <div class="card" data-aos="fade-bottom" data-aos-duration="2000">
                     <div class="img-wrapper" style="height: 300px;"><img src="img/projeto-2.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Costs &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, JSON como DataBase</p>
+                          <p class="card-text" id="costs_texto">Um projeto cujo objetivo é administrar as finanças do usuário. Projeto vindo do YouTube.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;" id="tecnologias_movietag">HTML, CSS, JS, React, JSON como DataBase</span></p>
                     </div>
                 </div>
             </div>
               <div class="carousel-item" >
-                <div class="card" style="margin-left: 5%;">
+                <div class="card">
                     <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-3.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                     <div class="card-body">
                         <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Movie Tag &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS, React, API IMDB</p>
+                          <p class="card-text" id="movietag_texto">Aqui, você vai encontrar os melhores filmes classificados pelo IMDB em um só lugar!</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, JS, React, API IMDB</span></p>
                     </div>
                 </div>
             </div>
               <div class="carousel-item" >
-                  <div class="card" style="margin-left: 5%;">
+                  <div class="card">
                       <div class="img-wrapper"style="height: 300px;"><img src="img/projeto-4.png" class="img-projeto" class="d-block w-100" alt="..."> </div>
                       <div class="card-body">
                           <h5 class="card-title"><a href="#" style="text-decoration: none; color: #C55225;">Apoleon &nbsp;<i class="fa-solid fa-arrow-up-right-from-square" style="color: #C55225;"></i></a></h5>
-                          <p class="card-text">Produto para uma empresa que produz software e presta serviços de marketing.</p>
-                          <p class="card-text"><span style="color: #C55225;"><b>Tecnologias utilizadas:</b></span> HTML, CSS, JS</p>
+                          <p class="card-text" id="apoleon_texto">Produto para uma empresa que produz software e presta serviços de <br/>marketing, como identidade visual, criação de posts, etc.</p>
+                          <p class="card-text"><span style="color: #C55225; font-weight: bold;">HTML, CSS, JS</span></p>
                       </div>
                   </div>
               </div>
@@ -595,10 +592,8 @@
           </button>
       </div>
 
-
-
       <div class="container" data-aos="flip-left" data-aos-duration="2000" style="margin: auto; margin-top: 8%;">
-        <h3 class="title stacks" style="text-align: center;">Stacks dominadas</h3>
+        <h3 class="title stacks" id="stacks_dominadas" style="text-align: center;">Stacks dominadas</h3>
         <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3" style="margin: auto; margin-top: 5%;">
           <div class="col">
             <div class="p-3" style="text-align: center;"><i class="icones-tecnologias fa-brands fa-html5" data-bs-toggle="tooltip" data-bs-placement="top" title="HTML"></i></div>
@@ -635,7 +630,7 @@
 
       <section class="certificados-servicos">
         <br/><br/>
-        <h2 id="minhas-conquistas">Minhas conquistas</h2>
+        <h2 id="minhas_conquistas">Minhas conquistas</h2>
         <br/><br/>
         <div class="row row-cols-1 row-cols-md-3 g-4 certificados">
           
@@ -645,8 +640,7 @@
                 alt="Hollywood Sign on The Hill" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Git & GitHub</h5>
-                <p class="card-text">
-                  Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.
+                <p class="card-text" id="git_texto">Aqui, aprendi sobre repositórios, <i>pushes, pulls, commits</i> e versionamento de código.
                 </p>
               </div>
             </div>
@@ -657,8 +651,7 @@
                 alt="Palm Springs Road" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Success</h5>
-                <p class="card-text">
-                  Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.
+                <p class="card-text" id="cs_texto">Pratiquei as principais técnicas de Sucesso do Cliente, tendo aulas teóricas, práticas e, no final, uma prova de conhecimento sobre o curso.
                 </p>
               </div>
             </div>
@@ -669,7 +662,7 @@
                 alt="Los Angeles Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">ReactJS Essential Training</h5>
-                <p class="card-text">Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.</p>
+                <p class="card-text" id="react_texto">Codifiquei componentes, rotas, funções e bibliotecas no geral do ReactJS.</p>
               </div>
             </div>
           </div>
@@ -681,8 +674,8 @@
               <img src="img/agile.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Desenvolvimento Ágil de Software</h5>
-                <p class="card-text">Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="agile_titulo">Desenvolvimento Ágil de Software</h5>
+                <p class="card-text" id="agile_texto">Nesse curso, aprendi um pouco sobre os principais métodos de desenvolvimento ágil de software, suas características e aplicabilidade.
                 </p>
               </div>
             </div>
@@ -693,7 +686,7 @@
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">Customer Experience</h5>
-                <p class="card-text">De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.
+                <p class="card-text" id="cx_texto">De maneira parecida com o curso de Customer Success, desenvolvi os principais conceitos de Customer Experience, realizando uma prova ao final do curso.
                 </p>
               </div>
             </div>
@@ -703,8 +696,8 @@
               <img src="img/scrum.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do SCRUM</h5>
-                <p class="card-text">Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, <i>sprints, backlogs, </i> etc.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="scrum_titulo">Fundamentos do SCRUM</h5>
+                <p class="card-text" id="scrum_texto">Aqui, desenvolvi mais a fundo as ideias da metodologia SCRUM, como reuniões diárias, artefatos, <i>sprints, backlogs, </i> etc.
                 </p>
               </div>
             </div>
@@ -714,8 +707,8 @@
               <img src="img/marketing.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Fundamentos do Marketing Digital</h5>
-                <p class="card-text">Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="marketing_titulo">Fundamentos do Marketing Digital</h5>
+                <p class="card-text" id="marketing_texto">Nesse curso, pratiquei os fundamentos do Marketing Digital, estratégias para alcançar mais pessoas, técnicas de campanhas, etc.
                 </p>
               </div>
             </div>
@@ -725,8 +718,8 @@
               <img src="img/problemas.png" class="card-img-top img-certificado"
                 alt="Skyscrapers" />
               <div class="card-body">
-                <h5 class="card-title" style="color: #C55225; font-weight: bold;">Técnicas de Resolução de Problemas</h5>
-                <p class="card-text">Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.
+                <h5 class="card-title" style="color: #C55225; font-weight: bold;" id="problemas_titulo">Técnicas de Resolução de Problemas</h5>
+                <p class="card-text" id="problemas_texto">Pratiquei algumas maneiras de resolver problemas empresariais, como a matriz GUT, validação de urgência de atividades, entre outras.
                 </p>
               </div>
             </div>
@@ -737,7 +730,7 @@
                 alt="Skyscrapers" />
               <div class="card-body">
                 <h5 class="card-title" style="color: #C55225; font-weight: bold;">CopyWriting</h5>
-                <p class="card-text">Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc
+                <p class="card-text" id="copywriting_texto">Aprendi sobre a escrita persuasiva, como escrever bons <i>copies</i>, ser objetivo, desenvolver <i>personas</i>, etc
                 </p>
               </div>
             </div>
@@ -746,16 +739,16 @@
         </div>
 
 
-        <div class="servicos_oferecidos" id="servicos_oferecidos">
+        <div class="servicos_oferecidos" id="servicos-oferecidos">
           <br/><br/><br/>
-          <h2 id="servicos-oferecidos">Serviços oferecidos</h2>
+          <h2 id="servicos_oferecidos">Serviços oferecidos</h2>
           <div class="servicos row">
             <div class="card col-md-4 col-sm-12 servicos-container" data-aos="fade-up" data-aos-duration="1000">
               <img src="img/icon-1.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Desenvolvimento de Software</h5>
-                <p class="card-text servicos-texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
+                <h5 class="card-title topicos-servicos" id="servicos_desenvolvimento_titulo">Desenvolvimento de Software</h5>
+                <p class="card-text servicos-texto" id="servicos_desenvolvimento_texto">Programação no geral. Aqui, me coloco a disposição para resolver problemas, desenvolver soluções personalizadas e oferecer um produto de qualidade em sua entrega final! Utilizo, até agora, as stacks citadas acima para o desenvolvimento do software.</p>
               </div>
             </div>
         
@@ -763,8 +756,8 @@
               <img src="img/icon-2.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Prototipação</h5>
-                <p class="card-text servicos-texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
+                <h5 class="card-title topicos-servicos" id="servicos_prototipacao_titulo">Prototipação</h5>
+                <p class="card-text servicos-texto" id="servicos_prototipacao_texto">Nada de sentar na frente do computador e sair programando sem rumo! A prototipação do produto é uma etapa extremamente importante, e faço questão de não deixá-la para trás. Com o Figma, é possível ver como o software final vai ficar, antes mesmo de sua produção!</p>
               </div>
             </div>
         
@@ -772,8 +765,8 @@
               <img src="img/icon-3.png" class="card-img-top img-servicos" alt="...">
               <br/>
               <div class="card-body">
-                <h5 class="card-title topicos-servicos">Copywriting & SEO</h5>
-                <p class="card-text servicos-texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
+                <h5 class="card-title topicos-servicos" id="servicos_copywriting_titulo">Copywriting & SEO</h5>
+                <p class="card-text servicos-texto" id="servicos_copywriting_texto">Além de tudo isso, ainda deixo o software com excelentes textos para que o site seja bem ranqueado pelo Google no que se refere a SEO. Usar palavras-chave e tags corretas faz a diferença para os mecanismos de busca, por isso, é de suma importância manter um bom copy no site! </p>
               </div>
             </div>
         </div>
@@ -783,112 +776,91 @@
         <h2 style="text-align: center; color: white;">Quer solicitar um serviço? <span style="color: #C55225;">Entre em contato!</span></h2>
 
         <div class="row">
-          <div class="col">
-            <img src="img/email.png" class="img-email">
-          </div>
-          <div class="col">
-            <form style="width: 80%; margin: 5% auto;"  method="POST" action="#" class="form-contato">
-              <!-- Name input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" for="form4Example1" style="color: white;">Nome</label>
-                <input type="text" id="form4Example1" class="form-control" name="nome" />
+            <form style="width: 60%; margin: 5% auto; color: white;">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Seu nome</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
-            
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" style="color: white;" for="form4Example2">E-mail</label>
-                <input type="email" id="form4Example2" class="form-control" name="email"/>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
               </div>
-            
-              <!-- Message input -->
-              <div class="form-outline mb-4">
-                <label class="form-label" style="color: white;" for="form4Example3">Sua mensagem</label>
-                <textarea class="form-control" id="form4Example3" rows="4" style="resize: none;" name="mensagem"></textarea>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Deixe sua mensagem aqui</label>
+                <textarea type="password" class="form-control" id="exampleInputPassword1" style="resize: none;"></textarea>
               </div>
-            
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-block mb-4" style="background-color: #C55225; color:#151627; font-weight: bold;">Enviar mensagem</button>
+              <button type="submit" class="btn" style="background-color: #C55225; color: #151627; font-weight: bold;">Enviar mensagem</button>
             </form>
-          </div>
         </div>
       </div>
 
-      
-      
-    
+      <footer class="text-center text-white"  style="margin-top: 5%; background-color: #151627;">
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              
 
-        <!-- footer -->
-        <footer class="text-center text-white"  style="margin-top: 5%; background-color: #151627;">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      
+              
 
-      
+              <!-- Google -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #dd4b39;"
+                href="mailto:stabilepedro010403@gmail.com"
+                role="button"
+                target="_blank"
+                ><i class="fab fa-google"></i
+              ></a>
 
-      <!-- Google -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #dd4b39;"
-        href="mailto:stabilepedro010403@gmail.com"
-        role="button"
-        target="_blank"
-        ><i class="fab fa-google"></i
-      ></a>
+              <!-- Instagram -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #ac2bac;"
+                href="https://www.instagram.com/pedronet00/"
+                role="button"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
 
-      <!-- Instagram -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #ac2bac;"
-        href="https://www.instagram.com/pedronet00/"
-        role="button"
-        target="_blank"
-        ><i class="fab fa-instagram"></i
-      ></a>
+              <!-- Linkedin -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #0082ca;"
+                href="https://www.linkedin.com/in/pedro-neto-222162212/"
+                role="button"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <!-- Github -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #333333;"
+                href="https://github.com/pedronet00"
+                role="button"
+                target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+            <!-- Section: Social media -->
+          </div>
+          <!-- Grid container -->
 
-      <!-- Linkedin -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #0082ca;"
-        href="https://www.linkedin.com/in/pedro-neto-222162212/"
-        role="button"
-        target="_blank"
-        ><i class="fab fa-linkedin-in"></i
-      ></a>
-      <!-- Github -->
-      <a
-        class="btn text-white btn-floating m-1"
-        style="background-color: #333333;"
-        href="https://github.com/pedronet00"
-        role="button"
-        target="_blank"
-        ><i class="fab fa-github"></i
-      ></a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: #151627;">
-    <p style="font-size: 12px;"><i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b></p>
-  </div>
-  <!-- Copyright -->
-        </footer>
-        <!-- /footer -->
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: #151627;">
+            <p style="font-size: 12px;" id="versiculo"><i>Porque dele e por ele, e para ele, são todas as coisas; glória, pois, a ele eternamente. Amém.</i><br/> <b>Romanos 11:36</b></p>
+          </div>
+          <!-- Copyright -->
+      </footer>
+        
 </body>
 
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> 
 
-  
 <script>
-
-const titulo = document.querySelector('.titulo-principal');
+      
+    const titulo = document.querySelector('.titulo-principal');
     const textoVariavel = "Desenvolvedor FullStack";
 
     function typeWrite(elemento, texto) {
@@ -972,7 +944,7 @@ const titulo = document.querySelector('.titulo-principal');
     const mostrarTodosBtn = document.getElementById("mostrarTodos");
     const ocultarTodosBtn = document.getElementById("ocultarTodos");
     const hiddenCards = document.querySelectorAll(".hidden-card");
-    const servicosOferecidosSection = document.getElementById("minhas-conquistas");
+    const servicosOferecidosSection = document.getElementById("minhas_conquistas");
 
     mostrarTodosBtn.addEventListener("click", function () {
         hiddenCards.forEach(function (card) {
